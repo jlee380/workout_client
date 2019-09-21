@@ -1,26 +1,33 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Wrapper from './layout/Wrapper';
+import Navbar from './components/navbar/Navbar';
+import Header from './layout/Header';
+import Footer from './layout/Footer';
+import Gym from './components/Gym';
+import User from './components/User';
+
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+
+// import 'bootstrap/dist/css/bootsrap.min.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className='app'>
+            <Router>
+                <Navbar />
+                <br />
+                <Wrapper>
+                    <Header>
+                        <h1>My portfolio</h1>
+                        <p>Find your workout partners</p>
+                    </Header>
+                    <Route path='/gym' exact component={Gym} />
+                    <Route path='/user' exact component={User} />
+                </Wrapper>
+                <Footer>footer text</Footer>
+            </Router>
+        </div>
+    );
 }
 
 export default App;
