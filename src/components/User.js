@@ -12,7 +12,7 @@ export default class User extends Component {
     };
 
     handleGetUser = () => {
-        fetch('http://localhost:5000/user')
+        fetch('http://159.89.114.98/user')
             .then(response => response.json())
             .then(data => {
                 this.setState({ users: data });
