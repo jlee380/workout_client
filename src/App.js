@@ -18,7 +18,6 @@ function App() {
             <Router>
                 <Wrapper>
                     <Navbar />
-                    <br />
                     <Header></Header>
                     <Route path='/' exact component={Home} />
                     <Route path='/partner' component={Partner} />

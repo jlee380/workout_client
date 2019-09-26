@@ -1,4 +1,15 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
+import { BASE_URL } from '../../environment';
+
+const UserProfile = () => {
+    return (
+        <ul>
+            <li>
+                <a></a>
+            </li>
+        </ul>
+    );
+};
 
 export default class User extends Component {
     state = {
@@ -11,31 +22,37 @@ export default class User extends Component {
         user: {}
     };
 
-    handleGetUser = () => {
-        fetch('https://jonghunjacoblee.com/user')
+    handleGetUser = () => {};
+
+    componentDidMount = () => {
+        fetch(`${BASE_URL}/user`)
             .then(response => response.json())
             .then(data => {
                 this.setState({ users: data });
             });
     };
 
-    componentDidMount = () => {};
-
     render() {
-        let divStyle = {
-            color: 'white'
-        };
-
         return (
-            <div style={divStyle}>
-                <button onClick={this.handleGetUser}>Fetching users</button>
+            <>
+                <UserProfile />
                 <ul>
                     {this.state.users.map((user, i) => {
                         return <li key={user._id}>{user._id}</li>;
                     })}
                     {this.user}
                 </ul>
-            </div>
+            </>
         );
     }
+}
+
+{
+    /* <button onClick={this.handleGetUser}>Fetching users</button>
+                <ul>
+                    {this.state.users.map((user, i) => {
+                        return <li key={user._id}>{user._id}</li>;
+                    })}
+                    {this.user}
+                </ul> */
 }

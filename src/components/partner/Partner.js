@@ -1,18 +1,19 @@
 import React, { Component } from 'react';
 import User from './User';
 import GoogleMap from './GoogleMap';
+import styled from 'styled-components';
 
 export default class Partner extends Component {
     render() {
-        const style = {
-            display: 'grid'
-            // gridtemplatecolumns: repeat(2, 1fr),
-        };
+        const Div = styled.div`
+            display: grid;
+            grid-template-columns: 50% 50%;
+        `;
         return (
-            <div style={style}>
+            <Div>
                 <User></User>
                 <GoogleMap></GoogleMap>
-            </div>
+            </Div>
         );
     }
 }
