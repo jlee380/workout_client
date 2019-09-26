@@ -6,16 +6,17 @@ export const Ul = styled.ul`
     grid-gap: 20px;
     padding: 0;
     list-style: none;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(8, 1fr);
 `;
 
 export const Li = styled.li``;
 
 export const Nav = styled.nav`
-    height: 50px;
-    width: 100%;
-    background-color: #4d4d4d;
+    /* height: 50px;
+    width: 100%; */
     position: relative;
+    /* background-color: #fcfbf7; */
+    background-color: #4d4d4d;
 `;
 
 export const A = styled(Link)`
@@ -24,7 +25,7 @@ export const A = styled(Link)`
     text-decoration: none;
     padding: 0.8rem;
     text-align: center;
-    color: white;
+    color: black;
     text-transform: uppercase;
     font-size: 1.1rem;
     box-shadow: black;

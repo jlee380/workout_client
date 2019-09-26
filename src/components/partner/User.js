@@ -12,7 +12,7 @@ export default class User extends Component {
     };
 
     handleGetUser = () => {
-        fetch('http://159.89.114.98/user')
+        fetch('https://159.89.114.98/user')
             .then(response => response.json())
             .then(data => {
                 this.setState({ users: data });
@@ -22,8 +22,12 @@ export default class User extends Component {
     componentDidMount = () => {};
 
     render() {
+        let divStyle = {
+            color: 'white'
+        };
+
         return (
-            <div>
+            <div style={divStyle}>
                 <button onClick={this.handleGetUser}>Fetching users</button>
                 <ul>
                     {this.state.users.map((user, i) => {
