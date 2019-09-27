@@ -5,15 +5,25 @@ import styled from 'styled-components';
 
 export default class Partner extends Component {
     render() {
-        const Div = styled.div`
-            display: grid;
-            grid-template-columns: 50% 50%;
+        const Container = styled.div`
+            display: flex;
+            list-style: none;
+            /* overflow: hidden; */
+        `;
+        const CardDiv = styled.div`
+            flex: 50%;
+            background-color: white;
+            /* overflow-y: scroll; */
         `;
         return (
-            <Div>
-                <User></User>
-                <GoogleMap></GoogleMap>
-            </Div>
+            <Container>
+                <CardDiv>
+                    <User></User>
+                </CardDiv>
+                <CardDiv>
+                    <GoogleMap></GoogleMap>
+                </CardDiv>
+            </Container>
         );
     }
 }

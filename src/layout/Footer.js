@@ -5,8 +5,8 @@ export default styled.div`
     bottom: 0;
     width: 92%; */
     position: relative;
-    bottom: 0;
-    height: 10%;
+    bottom: 1px;
+    height: 200px;
     color: white;
     background: #4d4d4d;
 `;

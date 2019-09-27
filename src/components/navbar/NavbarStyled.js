@@ -16,11 +16,11 @@ export const Nav = styled.nav`
     width: 100%; */
     position: relative;
     /* background-color: #fcfbf7; */
-    background-color: #4d4d4d;
+    background-color: #fcfbf7;
 `;
 
 export const A = styled(Link)`
-    background-color: #4d4d4d;
+    background-color: #fcfbf7;
     display: block;
     text-decoration: none;
     padding: 0.8rem;

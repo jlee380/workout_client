@@ -1,15 +1,63 @@
 import React, { Component, Fragment } from 'react';
 import { BASE_URL } from '../../environment';
+import styled from 'styled-components';
+import SimpleBar from 'simplebar-react';
+import 'simplebar/dist/simplebar.min.css';
+import image from './matthew.png';
+import './User.css';
+import { Card, Icon, Image } from 'semantic-ui-react';
 
-const UserProfile = () => {
-    return (
-        <ul>
-            <li>
-                <a></a>
-            </li>
-        </ul>
-    );
-};
+class UserProfileCard extends Component {
+    render() {
+        const { userList } = this.props;
+        const Container = styled.ul`
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            list-style: none;
+        `;
+        const CardDiv = styled.li`
+            flex: 50%;
+            padding-bottom: 30px;
+        `;
+        return (
+            <>
+                <Container>
+                    {userList.map((user, i) => {
+                        return (
+                            // <img src={image} key={user._id} />
+                            // <p key={user._id}>{user._id}</p>
+                            <CardDiv key={user._id}>
+                                <Card className='card_wrpper'>
+                                    <Image src={image} wrapped ui={false} />
+                                    <Card.Content>
+                                        <Card.Header>Matthew</Card.Header>
+                                        <Card.Meta>
+                                            <span className='date'>
+                                                Joined in 2019.SEP
+                                            </span>
+                                        </Card.Meta>
+                                        <Card.Description>
+                                            This is a primary location
+                                        </Card.Description>
+                                    </Card.Content>
+                                    <Card.Content extra>
+                                        <a>
+                                            <Icon name='user' />
+                                            22 workout friends
+                                        </a>
+                                    </Card.Content>
+                                </Card>
+                            </CardDiv>
+                        );
+                    })}
+                </Container>
+            </>
+        );
+    }
+    // const { userList } = this.props;
+    // console.log(userList);
+}
 
 export default class User extends Component {
     state = {
@@ -18,11 +66,9 @@ export default class User extends Component {
         firstName: '',
         lastName: '',
         gender: 0,
-        users: [{ _id: 1 }, { _id: 2 }],
+        users: [],
         user: {}
     };
-
-    handleGetUser = () => {};
 
     componentDidMount = () => {
         fetch(`${BASE_URL}/user`)
@@ -33,26 +79,63 @@ export default class User extends Component {
     };
 
     render() {
+        const Wrapper = styled.div`
+            padding-left: 40px;
+        `;
+
+        const FilterHeader = styled.div`
+            flex: 100%;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 8px;
+            padding-bottom: 10px;
+        `;
+        const FilterList = styled.div`
+            display: flex;
+            flex: 100%;
+            flex-direction: row;
+        `;
+        const Filter = styled.div`
+            font-size: 16px;
+            align-items: center;
+            cursor: pointer;
+            padding-right: 70px;
+            padding-bottom: 20px;
+
+            &:actvie {
+                font-weight: bold;
+            }
+        `;
+        const CurrentLocation = styled.div`
+            flex: 100%;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 8px;
+        `;
+        const GymLocation = styled.div`
+            flex: 100%;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 18px;
+            align-items: center;
+            padding-bottom: 20px;
+        `;
         return (
             <>
-                <UserProfile />
-                <ul>
-                    {this.state.users.map((user, i) => {
-                        return <li key={user._id}>{user._id}</li>;
-                    })}
-                    {this.user}
-                </ul>
+                <Wrapper>
+                    <FilterHeader>Filter</FilterHeader>
+                    <FilterList>
+                        <Filter>First Filter</Filter>
+                        <Filter>Second Filter</Filter>
+                        <Filter>Third Filter</Filter>
+                    </FilterList>
+                    <CurrentLocation>Current Location: </CurrentLocation>
+                    <GymLocation>North York</GymLocation>
+                </Wrapper>
+                <SimpleBar style={{ height: '70%' }}>
+                    <UserProfileCard userList={this.state.users} />
+                </SimpleBar>
             </>
         );
     }
-}
-
-{
-    /* <button onClick={this.handleGetUser}>Fetching users</button>
-                <ul>
-                    {this.state.users.map((user, i) => {
-                        return <li key={user._id}>{user._id}</li>;
-                    })}
-                    {this.user}
-                </ul> */
 }
