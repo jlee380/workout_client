@@ -12,10 +12,8 @@ export const Ul = styled.ul`
 export const Li = styled.li``;
 
 export const Nav = styled.nav`
-    /* height: 50px;
-    width: 100%; */
+    width: 100%;
     position: relative;
-    /* background-color: #fcfbf7; */
     background-color: #fcfbf7;
 `;
 

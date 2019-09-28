@@ -1,11 +1,12 @@
 import React, { Component, Fragment } from 'react';
-import { BASE_URL } from '../../environment';
 import styled from 'styled-components';
 import SimpleBar from 'simplebar-react';
+import { Card, Icon, Image } from 'semantic-ui-react';
 import 'simplebar/dist/simplebar.min.css';
+
+import { BASE_URL } from 'environment';
 import image from './matthew.png';
 import './User.css';
-import { Card, Icon, Image } from 'semantic-ui-react';
 
 class UserProfileCard extends Component {
     render() {
@@ -25,8 +26,6 @@ class UserProfileCard extends Component {
                 <Container>
                     {userList.map((user, i) => {
                         return (
-                            // <img src={image} key={user._id} />
-                            // <p key={user._id}>{user._id}</p>
                             <CardDiv key={user._id}>
                                 <Card className='card_wrpper'>
                                     <Image src={image} wrapped ui={false} />
@@ -55,8 +54,6 @@ class UserProfileCard extends Component {
             </>
         );
     }
-    // const { userList } = this.props;
-    // console.log(userList);
 }
 
 export default class User extends Component {

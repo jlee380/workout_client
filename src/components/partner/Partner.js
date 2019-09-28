@@ -1,27 +1,26 @@
 import React, { Component } from 'react';
+import styled from 'styled-components';
+
 import User from './User';
 import GoogleMap from './GoogleMap';
-import styled from 'styled-components';
 
 export default class Partner extends Component {
     render() {
         const Container = styled.div`
             display: flex;
             list-style: none;
-            /* overflow: hidden; */
         `;
         const CardDiv = styled.div`
             flex: 50%;
             background-color: white;
-            /* overflow-y: scroll; */
         `;
         return (
             <Container>
                 <CardDiv>
-                    <User></User>
+                    <User />
                 </CardDiv>
                 <CardDiv>
-                    <GoogleMap></GoogleMap>
+                    <GoogleMap />
                 </CardDiv>
             </Container>
         );
