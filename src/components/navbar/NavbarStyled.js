@@ -2,18 +2,23 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 export const Ul = styled.ul`
-    display: grid;
+    display: flex;
+    justify-content: space-between;
     grid-gap: 20px;
-    padding: 0;
     list-style: none;
-    grid-template-columns: repeat(8, 1fr);
 `;
 
-export const Li = styled.li``;
+export const Li = styled.li`
+    padding-left: 60px;
+`;
 
 export const Nav = styled.nav`
+    display: flex;
+    justify-content: space-between;
     width: 100%;
+    max-height: 80px;
     position: relative;
+    align-items: left;
     background-color: #fcfbf7;
 `;
 
@@ -23,11 +28,32 @@ export const A = styled(Link)`
     text-decoration: none;
     padding: 0.8rem;
     text-align: center;
-    color: black;
+    color: #445a52;
+    font-size: 14;
+    font-weight: 500;
     text-transform: uppercase;
-    font-size: 1.1rem;
     box-shadow: black;
-    :hover {
-        background-color: rgba(0, 0, 0, 0.3);
-    }
+    max-height: 80px;
 `;
+export const LogoLink = styled(A)`
+    background-color: white;
+`;
+export const SignUpLink = styled(A)`
+    display: inline-block;
+    height: 75px;
+    width: 205px;
+    position: relative;
+    bottom: 13px;
+    text-align: center;
+    line-height: 45px;
+    color: white;
+    background-color: #173839;
+`;
+
+export const Img = styled.img`
+    background-color: white;
+    width: 217px;
+    height: 57px;
+`;
+
+export const Div = styled.div``;

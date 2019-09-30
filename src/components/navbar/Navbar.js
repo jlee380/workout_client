@@ -1,22 +1,26 @@
 import React from 'react';
 
-import { Ul, Li, Nav, A } from './NavbarStyled';
+import { Ul, Li, Nav, A, Img, Div, LogoLink, SignUpLink } from './NavbarStyled';
+import Logo from 'assets/images/logo.png';
 
 const Navbar = () => {
     return (
         <Nav>
+            <LogoLink to='./'>
+                <Img src={Logo} alt='Home'></Img>
+            </LogoLink>
             <Ul>
                 <Li>
-                    <A to='./partner'>Partner</A>
+                    <A to='./partner'>FIND BUDDY</A>
                 </Li>
                 <Li>
                     <A to='./gym'>Gym</A>
                 </Li>
                 <Li>
-                    <A to='./user'>User</A>
+                    <A to='about'>CONTACT US</A>
                 </Li>
                 <Li>
-                    <A to='#'>About</A>
+                    <SignUpLink to='./signup'>SIGN UP</SignUpLink>
                 </Li>
             </Ul>
         </Nav>
