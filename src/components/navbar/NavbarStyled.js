@@ -1,14 +1,14 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-export const Ul = styled.ul`
+export const NavItems = styled.ul`
     display: flex;
     justify-content: space-between;
     grid-gap: 20px;
     list-style: none;
 `;
 
-export const Li = styled.li`
+export const NavItem = styled.li`
     padding-left: 60px;
 `;
 

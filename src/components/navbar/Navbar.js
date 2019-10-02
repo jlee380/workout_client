@@ -1,6 +1,14 @@
 import React from 'react';
 
-import { Ul, Li, Nav, A, Img, Div, LogoLink, SignUpLink } from './NavbarStyled';
+import {
+    NavItems,
+    NavItem,
+    Nav,
+    A,
+    Img,
+    LogoLink,
+    SignUpLink
+} from './NavbarStyled';
 import Logo from 'assets/images/logo.png';
 
 const Navbar = () => {
@@ -9,20 +17,20 @@ const Navbar = () => {
             <LogoLink to='./'>
                 <Img src={Logo} alt='Home'></Img>
             </LogoLink>
-            <Ul>
-                <Li>
+            <NavItems>
+                <NavItem>
                     <A to='./partner'>FIND BUDDY</A>
-                </Li>
-                <Li>
+                </NavItem>
+                <NavItem>
                     <A to='./gym'>Gym</A>
-                </Li>
-                <Li>
+                </NavItem>
+                <NavItem>
                     <A to='about'>CONTACT US</A>
-                </Li>
-                <Li>
+                </NavItem>
+                <NavItem>
                     <SignUpLink to='./signup'>SIGN UP</SignUpLink>
-                </Li>
-            </Ul>
+                </NavItem>
+            </NavItems>
         </Nav>
     );
 };
