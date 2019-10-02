@@ -7,24 +7,6 @@ import './User.css';
 import UserProfileCard from './UserProfileCard';
 
 export default class User extends Component {
-    // state = {
-    //     username: '',
-    //     email: '',
-    //     firstName: '',
-    //     lastName: '',
-    //     gender: 0,
-    //     users: [],
-    //     user: {}
-    // };
-
-    // componentDidMount = () => {
-    //     fetch(`${BASE_URL}/user`)
-    //         .then(response => response.json())
-    //         .then(data => {
-    //             this.setState({ users: data });
-    //         });
-    // };
-
     render() {
         const Wrapper = styled.div`
             padding-left: 40px;
