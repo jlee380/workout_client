@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 import User from './User';
 import GoogleMap from './GoogleMap';
+import WrapperdMap from './GoogleMap';
 
 export default class Partner extends Component {
     render() {
@@ -20,9 +21,16 @@ export default class Partner extends Component {
                     <User />
                 </CardDiv>
                 <CardDiv>
-                    <GoogleMap />
+                    <WrapperdMap
+                        googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyAz_BEDb-fM3MzNHfyuGiTxfnfl-04S9dQ`}
+                        loadingElement={<div style={{ height: '100%' }} />}
+                        containerElement={<div style={{ height: '100%' }} />}
+                        mapElement={<div style={{ height: '100%' }} />}
+                    />
                 </CardDiv>
             </Container>
         );
     }
 }
+
+// {process.env.REACT_APP_GOOGLE_KEY}
