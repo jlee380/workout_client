@@ -9,7 +9,7 @@ import {
 
 import * as gymLocation from 'data/gymData';
 import styles from './GoogleMapStyle.json';
-// import InfoWIndow fro./InfoWIndows.js/index.js.js';
+import gymIcon from 'assets/images/gym.svg';
 
 export class GoogleMaps extends Component {
     state = {
@@ -61,6 +61,13 @@ export class GoogleMaps extends Component {
                                 onClick={() => {
                                     this.handleSelectedGym(gym);
                                 }}
+                                icon={{
+                                    url: gymIcon,
+                                    scaledSize: new window.google.maps.Size(
+                                        25,
+                                        25
+                                    )
+                                }}
                             />
                         );
                     })}
@@ -76,6 +83,9 @@ export class GoogleMaps extends Component {
                         >
                             <>
                                 <h2>{this.state.selectedGym.name}</h2>
+                                <p>
+                                    {this.state.selectedGym.formatted_address}
+                                </p>
                                 <p>N number of users work out here</p>
                             </>
                         </InfoWindow>
