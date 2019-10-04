@@ -1,0 +1,887 @@
+{
+    "html_attributions": [],
+    "next_page_token": "CpQCAgEAADpRA_p1zXkFKXHJQZJUINL1yWFUji_vLXrsluG9KmLVcdAfVa073vY0H0V2bdmd2DFgKWD8zZ8ZA0t5-kETw2Ub0TQBqwsvNO66zjr2gnSq8qJQeIzdH_x_xqD3JvFWspzee3tSi00IGYLlic0tWqKPHdwCiKCHpSWkyfSOc4kTKNmfb0yEvhEm6iIhbvZkKLroDuTx6Ee_9zqo3g8WcWrThadZEnGXCEx7MMjzXRrEq1q6CiLlOwQ0cb557sHrh8zM-teBeH30S8bWyMfidOH5Yei4ZVxUsyU06Tlj32n9qIuMmCZAcvJc_BwaU7Y9IgZry_0ZF3LWqKmGxYkiXD3LbFrotyOKgGjrsS-OSwi8EhDQgsZHJ9z0c3E6kOwEY2_pGhT_g-nF3Lk-u4ceUoqb3MBDPLOZ4g",
+    "results": [
+        {
+            "formatted_address": "4950 Yonge St, North York, ON M2N 6K1 Canada",
+            "geometry": {
+                "location": {
+                    "lat": 43.7649785,
+                    "lng": -79.41207489999999
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 43.76615237989272,
+                        "lng": -79.41093327010728
+                    },
+                    "southwest": {
+                        "lat": 43.76345272010728,
+                        "lng": -79.41363292989273
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+            "id": "091d4d5213c91379fa3c9cc764a52a74ff648b3d",
+            "name": "GoodLife Fitness North York Madison Centre",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 3036,
+                    "html_attributions": [
+                        "\u003ca href=\"https://maps.google.com/maps/contrib/101052914968767549347/photos\"\u003eJames Lan\u003c/a\u003e"
+                    ],
+                    "photo_reference": "CmRaAAAAHGLSmuxGwDxLZJFMBHx88PPqoTqRdEw6HpoPv0cNte1Zg5szJKpaJWLs3RIsLHBOzFAdFrk0yG1AC4lFzac89nr7bKAvJSUmod_Fao_PdxznUvmeMD4ZM7hDiBjDLdJ1EhCyrqYs1UV73Gw5cIssCzn3GhSdnEM75OjFKtnmHXXR28VB1FXXaA",
+                    "width": 4048
+                }
+            ],
+            "place_id": "ChIJTVI3bGUtK4gReh318oWUdX8",
+            "plus_code": {
+                "compound_code": "QH7Q+X5 North York Ontario, Toronto",
+                "global_code": "87M2QH7Q+X5"
+            },
+            "rating": 3.6,
+            "reference": "ChIJTVI3bGUtK4gReh318oWUdX8",
+            "types": ["gym", "health", "point_of_interest", "establishment"],
+            "user_ratings_total": 475
+        },
+        {
+            "formatted_address": "110 Eglinton Ave E, Toronto, ON M4P 1A6 Canada",
+            "geometry": {
+                "location": {
+                    "lat": 43.7075047,
+                    "lng": -79.3953538
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 43.70879062989273,
+                        "lng": -79.39397622010728
+                    },
+                    "southwest": {
+                        "lat": 43.70609097010728,
+                        "lng": -79.39667587989273
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+            "id": "f0591964a1b2096ed488a7a7a65790265039ddc9",
+            "name": "GoodLife Fitness Toronto Dunfield and Eglinton",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 4608,
+                    "html_attributions": [
+                        "\u003ca href=\"https://maps.google.com/maps/contrib/113287580771994078886/photos\"\u003eAran Kumar\u003c/a\u003e"
+                    ],
+                    "photo_reference": "CmRaAAAAuaBgeVAiJYR8VvLpMLq1THNHzUd8TjTctkM9ABIeMkgD4wX5V7IcbpEWE-D4ICudk2DhYpTo-ubEBOFfc8r4mad28ghwEwC8h45ysUuH3Pb90KALnAMx2n5WX0EZdZ8FEhAfE3Ij2ot2l-8AZTF2BwPZGhRB34hrrfY3ujhIbUVd7tyFAY2xtw",
+                    "width": 3456
+                }
+            ],
+            "place_id": "ChIJb4WT0yQzK4gRels-27m9YvE",
+            "plus_code": {
+                "compound_code": "PJ53+2V Toronto Ontario",
+                "global_code": "87M2PJ53+2V"
+            },
+            "rating": 4.1,
+            "reference": "ChIJb4WT0yQzK4gRels-27m9YvE",
+            "types": ["gym", "health", "point_of_interest", "establishment"],
+            "user_ratings_total": 283
+        },
+        {
+            "formatted_address": "250 Davisville Ave, Toronto, ON M4S 2L9 Canada",
+            "geometry": {
+                "location": {
+                    "lat": 43.7006625,
+                    "lng": -79.3865579
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 43.70186822989272,
+                        "lng": -79.38516972010729
+                    },
+                    "southwest": {
+                        "lat": 43.69916857010728,
+                        "lng": -79.38786937989272
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+            "id": "3146090fc6ef4fd92ca93bdc0f44bef5312936fe",
+            "name": "GoodLife Fitness Toronto Mount Pleasant and Davisville",
+            "opening_hours": {
+                "open_now": false
+            },
+            "photos": [
+                {
+                    "height": 4032,
+                    "html_attributions": [
+                        "\u003ca href=\"https://maps.google.com/maps/contrib/109678745040240715970/photos\"\u003eJan Varrik\u003c/a\u003e"
+                    ],
+                    "photo_reference": "CmRaAAAAOfESGKFebdhPye629T8n8HsfT8Qwq1HUXJsfXeSpuelRQOAw3ZH2z5vDg4N2HEzeMFSyrm3seb_djvIw9j4r0lINDSPvJUqOWexkGS14OGo5FoXCMFNutUC8OpQojLmyEhA0gBnY5OZMHFjTiW0ZckYTGhRVP5D_aN90PmNPymf-onUAjUy_Cg",
+                    "width": 3024
+                }
+            ],
+            "place_id": "ChIJSU2hoDYzK4gRsoM2ts-vCt4",
+            "plus_code": {
+                "compound_code": "PJ27+79 Toronto Ontario",
+                "global_code": "87M2PJ27+79"
+            },
+            "rating": 4,
+            "reference": "ChIJSU2hoDYzK4gRsoM2ts-vCt4",
+            "types": ["gym", "health", "point_of_interest", "establishment"],
+            "user_ratings_total": 184
+        },
+        {
+            "formatted_address": "2300 Yonge St, Toronto, ON M4P 1E4 Canada",
+            "geometry": {
+                "location": {
+                    "lat": 43.7067371,
+                    "lng": -79.39951889999999
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 43.70821847989272,
+                        "lng": -79.39822307010728
+                    },
+                    "southwest": {
+                        "lat": 43.70551882010727,
+                        "lng": -79.40092272989273
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+            "id": "91916b7689a59693ee473c1df20ebce3df1e1487",
+            "name": "GoodLife Fitness Toronto Yonge Eglinton Centre",
+            "opening_hours": {
+                "open_now": false
+            },
+            "photos": [
+                {
+                    "height": 4032,
+                    "html_attributions": [
+                        "\u003ca href=\"https://maps.google.com/maps/contrib/113116452519826331277/photos\"\u003eMaria Yasnitsky\u003c/a\u003e"
+                    ],
+                    "photo_reference": "CmRZAAAAiEZFjPsxGv7SeYJpYkfcEf17OW2mC_TTgIm9vg4N8yu8jO5uHlHCE6QjIjWCH7dcyH9d1BinElnMQC6oNAuNdFJ3bvCzmZd0qBo4JkElGe4X9lVxNOKh9PskoyzQW1TOEhBnk_qRuykqtJQOKZQ-_-mdGhSu_A2ckUzO4AiVHZnriHJ_sDXHSA",
+                    "width": 3024
+                }
+            ],
+            "place_id": "ChIJsc7ruDwzK4gR4GWIhoTmdGw",
+            "plus_code": {
+                "compound_code": "PJ42+M5 Toronto Ontario",
+                "global_code": "87M2PJ42+M5"
+            },
+            "rating": 3.7,
+            "reference": "ChIJsc7ruDwzK4gR4GWIhoTmdGw",
+            "types": ["gym", "health", "point_of_interest", "establishment"],
+            "user_ratings_total": 125
+        },
+        {
+            "formatted_address": "137 Yonge St, Toronto, ON M5C 1W6 Canada",
+            "geometry": {
+                "location": {
+                    "lat": 43.6510717,
+                    "lng": -79.3785252
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 43.65240472989272,
+                        "lng": -79.37725392010726
+                    },
+                    "southwest": {
+                        "lat": 43.64970507010727,
+                        "lng": -79.37995357989271
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+            "id": "0e88f185b88a0bc06d61fe19dbc9ae53f0bc614a",
+            "name": "GoodLife Fitness Toronto 137 Yonge Street",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 1920,
+                    "html_attributions": [
+                        "\u003ca href=\"https://maps.google.com/maps/contrib/116884783877906636281/photos\"\u003eAdriano N\u003c/a\u003e"
+                    ],
+                    "photo_reference": "CmRaAAAAdZKRMNiAb1VInsrhsKcYdyyoJPrHGyr4il6voLqzBfMuuBTqgAtUa_4kEFLFasp5yYt6lCidtgZHaHRe5uDRgm9qwuTqjSmnbBOWqPihT2-Epqd6hl-cmgwo43CRdztcEhCRLaBDHHpOKQWMnuG06GI5GhR_DHBSPsW4PMLd_J0yLVZqyiubOA",
+                    "width": 1080
+                }
+            ],
+            "place_id": "ChIJjRqf7DLL1IkR-03PdrxNSwY",
+            "plus_code": {
+                "compound_code": "MJ2C+CH Toronto Ontario",
+                "global_code": "87M2MJ2C+CH"
+            },
+            "rating": 4,
+            "reference": "ChIJjRqf7DLL1IkR-03PdrxNSwY",
+            "types": ["gym", "health", "point_of_interest", "establishment"],
+            "user_ratings_total": 492
+        },
+        {
+            "formatted_address": "80 Bloor St W, Toronto, ON M5S 2V1 Canada",
+            "geometry": {
+                "location": {
+                    "lat": 43.6698447,
+                    "lng": -79.3901829
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 43.67106247989272,
+                        "lng": -79.38877792010727
+                    },
+                    "southwest": {
+                        "lat": 43.66836282010728,
+                        "lng": -79.39147757989272
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+            "id": "da12880e82b365f5af79327df13a2e1e2787ff92",
+            "name": "GoodLife Fitness Toronto Bloor and Bay",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 2560,
+                    "html_attributions": [
+                        "\u003ca href=\"https://maps.google.com/maps/contrib/102462988557504452538/photos\"\u003eRSH DVP\u003c/a\u003e"
+                    ],
+                    "photo_reference": "CmRaAAAAl5hYyRnPRBWFYFCjkPHObsLQxIpvz532iZIa6cG4K-S2ov5Cs6rUiYE4cun_POR9_VMjzr-jGcWRFqWynKpyBgsiXtx3lr10BDOb4uAlOJV2ZGoNhTwTND9EJDxngQMBEhD5p5jRrCwjVsIstmkbI0J9GhTzIwTN7umQCNosiulUrJt4NEmIgA",
+                    "width": 1536
+                }
+            ],
+            "place_id": "ChIJgWNk6K80K4gRa_32TEQ1hno",
+            "plus_code": {
+                "compound_code": "MJ95+WW Toronto Ontario",
+                "global_code": "87M2MJ95+WW"
+            },
+            "rating": 4,
+            "reference": "ChIJgWNk6K80K4gRa_32TEQ1hno",
+            "types": ["gym", "health", "point_of_interest", "establishment"],
+            "user_ratings_total": 268
+        },
+        {
+            "formatted_address": "8 Park Rd T floor, Toronto, ON M4W 3G8 Canada",
+            "geometry": {
+                "location": {
+                    "lat": 43.671316,
+                    "lng": -79.3847383
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 43.67235887989273,
+                        "lng": -79.38333907010728
+                    },
+                    "southwest": {
+                        "lat": 43.66965922010728,
+                        "lng": -79.38603872989273
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+            "id": "2543b8958ebf721f508a621e2da09496a576f0eb",
+            "name": "GoodLife Fitness Toronto Bloor and Park",
+            "opening_hours": {
+                "open_now": false
+            },
+            "photos": [
+                {
+                    "height": 3024,
+                    "html_attributions": [
+                        "\u003ca href=\"https://maps.google.com/maps/contrib/117627951111477000180/photos\"\u003eParminder Gill\u003c/a\u003e"
+                    ],
+                    "photo_reference": "CmRaAAAAorMUfP8XrjGfNpAiLzvA2d_X8XWCDEhLCDjZLIbSv0KTgBfBMmazxA0YjBVB0Q2qQ06KuaPVfibNJnlchERlXKhZ-lu0lOsbseCat44lcqcQtDDvpJA4zfhXevkyYJ6MEhDVrxPc7UTuUWVEhUASXEQ2GhSwyTOJSWJL5a0IgmWfuapWyox9rQ",
+                    "width": 4032
+                }
+            ],
+            "place_id": "ChIJJUpwS6w0K4gR436wZMgMklU",
+            "plus_code": {
+                "compound_code": "MJC8+G4 Toronto Ontario",
+                "global_code": "87M2MJC8+G4"
+            },
+            "rating": 3.7,
+            "reference": "ChIJJUpwS6w0K4gR436wZMgMklU",
+            "types": ["gym", "health", "point_of_interest", "establishment"],
+            "user_ratings_total": 151
+        },
+        {
+            "formatted_address": "55 Bloor St W #210, Toronto, ON M4W 1A5 Canada",
+            "geometry": {
+                "location": {
+                    "lat": 43.6686765,
+                    "lng": -79.3882263
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 43.66995327989272,
+                        "lng": -79.38683887010728
+                    },
+                    "southwest": {
+                        "lat": 43.66725362010727,
+                        "lng": -79.38953852989273
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+            "id": "17503f6969bdb49760546c707076f35ad64c535e",
+            "name": "GoodLife Fitness Toronto Manulife Centre",
+            "opening_hours": {
+                "open_now": false
+            },
+            "photos": [
+                {
+                    "height": 3024,
+                    "html_attributions": [
+                        "\u003ca href=\"https://maps.google.com/maps/contrib/109370548314155960179/photos\"\u003eJulian Lam\u003c/a\u003e"
+                    ],
+                    "photo_reference": "CmRaAAAArUfGfFYaMq0qFkheVQpecNu6NHQlR95pWIpFvd0foR0_-e40o7fGBA1EWWTKIXn0Rk8ePOfJBt8Svs3VA0j9cWnO8ww7GCdkjZ-JPb1HBlkCjZ0lXCILG13N9EjAL2JoEhCrNW32RhDucqZj6Vmn9C7uGhQZokkl_iXKxjsrodC1YzJk69ATQQ",
+                    "width": 4032
+                }
+            ],
+            "place_id": "ChIJKcn41rE0K4gR5fG7U2Owqsw",
+            "plus_code": {
+                "compound_code": "MJ96+FP Toronto Ontario",
+                "global_code": "87M2MJ96+FP"
+            },
+            "rating": 3.4,
+            "reference": "ChIJKcn41rE0K4gR5fG7U2Owqsw",
+            "types": ["gym", "health", "point_of_interest", "establishment"],
+            "user_ratings_total": 121
+        },
+        {
+            "formatted_address": "635 Danforth Ave, Toronto, ON M4K 1R2 Canada",
+            "geometry": {
+                "location": {
+                    "lat": 43.6785455,
+                    "lng": -79.3453059
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 43.68003352989272,
+                        "lng": -79.34400677010727
+                    },
+                    "southwest": {
+                        "lat": 43.67733387010727,
+                        "lng": -79.34670642989272
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+            "id": "d0cdbe5721b2399edfb591bcd9cc11cdc3b926b0",
+            "name": "GoodLife Fitness Toronto Danforth and Pape",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 3840,
+                    "html_attributions": [
+                        "\u003ca href=\"https://maps.google.com/maps/contrib/105188235447992202696/photos\"\u003eGoodLife Fitness\u003c/a\u003e"
+                    ],
+                    "photo_reference": "CmRaAAAAlAIBUd7VekJa58MVfmvOT7IqwCa56PAlUKg7HedyJ-wMckMTgq8gBrKgL944O-sk2ugCnMgOW5Ia9wjzX9PgGlufke71TX_LWd4KQ62CgCpTfOk_YxgnPPGwIZMxSGVOEhBFMqAxedL4HUKHEI3FRQCEGhSGln6PFPAFoPXdKNrWoz3JsidzZw",
+                    "width": 5760
+                }
+            ],
+            "place_id": "ChIJB9PdXoPM1IkRG9bsn8IrUfA",
+            "plus_code": {
+                "compound_code": "MMH3+CV Toronto Ontario",
+                "global_code": "87M2MMH3+CV"
+            },
+            "rating": 3.4,
+            "reference": "ChIJB9PdXoPM1IkRG9bsn8IrUfA",
+            "types": ["gym", "health", "point_of_interest", "establishment"],
+            "user_ratings_total": 307
+        },
+        {
+            "formatted_address": "5650 Yonge St, North York, ON M2N 4E9 Canada",
+            "geometry": {
+                "location": {
+                    "lat": 43.7800579,
+                    "lng": -79.416465
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 43.78135122989272,
+                        "lng": -79.41519847010728
+                    },
+                    "southwest": {
+                        "lat": 43.77865157010728,
+                        "lng": -79.41789812989272
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+            "id": "149553835fbc2ae8d3125f1ba9a7b0aa6b22ad8e",
+            "name": "GoodLife Fitness North York Yonge and Finch",
+            "opening_hours": {
+                "open_now": false
+            },
+            "photos": [
+                {
+                    "height": 2988,
+                    "html_attributions": [
+                        "\u003ca href=\"https://maps.google.com/maps/contrib/108465853631454186760/photos\"\u003eVirgiliu Livadariu\u003c/a\u003e"
+                    ],
+                    "photo_reference": "CmRaAAAA_GpxbGOsciAcDCKXKXM-n8wAlbBwTEgfX6DauuMsll_JYsz4bjxmia2xRvrY6O4QkzZnCFXTPpSRVPVIZQ5-3LopKWav-_X2BjJayGcUwpcC8cNw4sUGqeQy22tF7JsiEhDVZNvMsvfxRY1BVvffwhutGhSD9qkZXu7i_srk8kFNGsbjdju1IQ",
+                    "width": 5312
+                }
+            ],
+            "place_id": "ChIJdUz-cQ4tK4gRNOd2FAwWR1w",
+            "plus_code": {
+                "compound_code": "QHJM+2C North York Ontario, Toronto",
+                "global_code": "87M2QHJM+2C"
+            },
+            "rating": 3.5,
+            "reference": "ChIJdUz-cQ4tK4gRNOd2FAwWR1w",
+            "types": ["gym", "health", "point_of_interest", "establishment"],
+            "user_ratings_total": 304
+        },
+        {
+            "formatted_address": "483 Bay St, Toronto, ON M5G 2C9 Canada",
+            "geometry": {
+                "location": {
+                    "lat": 43.653823,
+                    "lng": -79.382445
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 43.65512447989272,
+                        "lng": -79.38133517010726
+                    },
+                    "southwest": {
+                        "lat": 43.65242482010728,
+                        "lng": -79.38403482989271
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+            "id": "3b56d10d39470ac47ef7c3537e172174a83938d4",
+            "name": "GoodLife Fitness Toronto Bell Trinity Centre",
+            "opening_hours": {
+                "open_now": false
+            },
+            "photos": [
+                {
+                    "height": 1920,
+                    "html_attributions": [
+                        "\u003ca href=\"https://maps.google.com/maps/contrib/106903631421447758049/photos\"\u003eA Google User\u003c/a\u003e"
+                    ],
+                    "photo_reference": "CmRaAAAAeMS7Me8pNJ4pf29-A4zieyQCgfEKS16ciRJBLOgYz4Ablg7d2IIGYQCEP54ERgq83jlJUNzJTi5pg_1AotYm_4uzVHgI-1vrMr-bsKLdt7RXJLVpGDwTLIngdx8bamkMEhAIa6o5JzNUgkacmVty03CFGhSoRfR9obavx7IqI0zQ2iOj1T6BrQ",
+                    "width": 1080
+                }
+            ],
+            "place_id": "ChIJX-NmU8s0K4gRrvEwT-WyvCs",
+            "plus_code": {
+                "compound_code": "MJ39+G2 Toronto Ontario",
+                "global_code": "87M2MJ39+G2"
+            },
+            "rating": 4,
+            "reference": "ChIJX-NmU8s0K4gRrvEwT-WyvCs",
+            "types": ["gym", "health", "point_of_interest", "establishment"],
+            "user_ratings_total": 146
+        },
+        {
+            "formatted_address": "7 Station St, Toronto, ON M5J 1C3 Canada",
+            "geometry": {
+                "location": {
+                    "lat": 43.644558,
+                    "lng": -79.382773
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 43.64597947989272,
+                        "lng": -79.38145277010727
+                    },
+                    "southwest": {
+                        "lat": 43.64327982010727,
+                        "lng": -79.38415242989272
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+            "id": "fb74d552bbf40d0e2760498bbbd34966def50f35",
+            "name": "GoodLife Fitness Toronto Union Station",
+            "opening_hours": {
+                "open_now": false
+            },
+            "photos": [
+                {
+                    "height": 4048,
+                    "html_attributions": [
+                        "\u003ca href=\"https://maps.google.com/maps/contrib/102553769511302489247/photos\"\u003eAndroid Dave\u003c/a\u003e"
+                    ],
+                    "photo_reference": "CmRaAAAAU9e0JQ1NK1qiJpdGCMDH-iw4gDsuzSxr-6z6MPzBOVQ6lW0JFkZU69VZ9EFaGuZ_Sr0K7vZIYNtX4yTV9Yig7AM1iKTVyu7MtkPyqhkREib6eMqIEQ8f2dfCuNuNGXdrEhBkbz8tu2oCvX3WSWwY3fqPGhTYiW4oshts565qBAb7uwFPmbBBaA",
+                    "width": 3036
+                }
+            ],
+            "place_id": "ChIJKbS4DNQ0K4gRWJOid5RlhBE",
+            "plus_code": {
+                "compound_code": "JJV8+RV Toronto Ontario",
+                "global_code": "87M2JJV8+RV"
+            },
+            "rating": 3.8,
+            "reference": "ChIJKbS4DNQ0K4gRWJOid5RlhBE",
+            "types": ["gym", "health", "point_of_interest", "establishment"],
+            "user_ratings_total": 190
+        },
+        {
+            "formatted_address": "111 Wellington St W, Toronto, ON M5J 2S6 Canada",
+            "geometry": {
+                "location": {
+                    "lat": 43.6464693,
+                    "lng": -79.3831108
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 43.64787787989272,
+                        "lng": -79.38178487010727
+                    },
+                    "southwest": {
+                        "lat": 43.64517822010728,
+                        "lng": -79.38448452989272
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+            "id": "5efbb5ff6632728d330efe1efa8a01ec633304e0",
+            "name": "GoodLife Fitness Toronto Wellington and York",
+            "opening_hours": {
+                "open_now": false
+            },
+            "photos": [
+                {
+                    "height": 4048,
+                    "html_attributions": [
+                        "\u003ca href=\"https://maps.google.com/maps/contrib/102553769511302489247/photos\"\u003eAndroid Dave\u003c/a\u003e"
+                    ],
+                    "photo_reference": "CmRaAAAA_mPMgONp7FB8WjD7r7z6LxJTjhyUPTtZOcrXsDZO1IF5KY9hAkJWay430QpAslDsjOQOHBjjU8q_FVqL0EOAW-_yFHXl6hhWmsP-xVMupCCAXZVWVrf9yDoe9kDJRkQJEhDD1ZibkfDhWxfrWPbzOSETGhTXNzVJDmJMlFylqFJX81WnP1K1-Q",
+                    "width": 3036
+                }
+            ],
+            "place_id": "ChIJ9elGB9M0K4gR9JeFPEUz-EA",
+            "plus_code": {
+                "compound_code": "JJW8+HQ Toronto Ontario",
+                "global_code": "87M2JJW8+HQ"
+            },
+            "rating": 3.7,
+            "reference": "ChIJ9elGB9M0K4gR9JeFPEUz-EA",
+            "types": ["gym", "health", "point_of_interest", "establishment"],
+            "user_ratings_total": 164
+        },
+        {
+            "formatted_address": "100 Yonge St, Toronto, ON M5C 2W1 Canada",
+            "geometry": {
+                "location": {
+                    "lat": 43.6497424,
+                    "lng": -79.37853749999999
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 43.65113242989272,
+                        "lng": -79.37700512010727
+                    },
+                    "southwest": {
+                        "lat": 43.64843277010728,
+                        "lng": -79.37970477989272
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+            "id": "b9a1845f842664e431ad1c6e6cb77cfdba532c38",
+            "name": "GoodLife Fitness Toronto Plaza",
+            "opening_hours": {
+                "open_now": false
+            },
+            "photos": [
+                {
+                    "height": 3024,
+                    "html_attributions": [
+                        "\u003ca href=\"https://maps.google.com/maps/contrib/111845888366981629260/photos\"\u003eOlga F\u003c/a\u003e"
+                    ],
+                    "photo_reference": "CmRaAAAAbrj935BRiMFfFZ43la2QAvyKf9src-8NazsSvBHKRsHHjgdBuGuegRhWcAyNH6zd470QxvIGSwMcWuFuaOE-oQbr5t-Q_l-GR1pUQaj5g1penKIc0fOvMT4gUhTgzGqcEhBgc5EZH3r4PoHrXntmxapBGhT2upEYQV1dSRyR_MNy0U7gxHJyMw",
+                    "width": 4032
+                }
+            ],
+            "place_id": "ChIJjRqf7DLL1IkRCtiTlHEu7XE",
+            "plus_code": {
+                "compound_code": "JJXC+VH Toronto Ontario",
+                "global_code": "87M2JJXC+VH"
+            },
+            "rating": 4.1,
+            "reference": "ChIJjRqf7DLL1IkRCtiTlHEu7XE",
+            "types": ["gym", "health", "point_of_interest", "establishment"],
+            "user_ratings_total": 101
+        },
+        {
+            "formatted_address": "267 Richmond St W, Toronto, ON M5V 3M6 Canada",
+            "geometry": {
+                "location": {
+                    "lat": 43.64876659999999,
+                    "lng": -79.3919179
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 43.65015602989272,
+                        "lng": -79.39059522010729
+                    },
+                    "southwest": {
+                        "lat": 43.64745637010727,
+                        "lng": -79.39329487989272
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+            "id": "9497168313f080b7b863f1338736b70f251992bb",
+            "name": "GoodLife Fitness Toronto Richmond and John",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 4032,
+                    "html_attributions": [
+                        "\u003ca href=\"https://maps.google.com/maps/contrib/102622284650094573187/photos\"\u003eJonathan Cartwright\u003c/a\u003e"
+                    ],
+                    "photo_reference": "CmRaAAAA9HrZJChY9tsCoRCqkrNeSQoNzP4lo7Gzx4ytESIU3Xst3PUMnLzkvcW6BN0XrFxMPkk4xLqmlCip4m_FFL4MsKQ7-U96jqWPuouLOR8JtFqz_nRzbZjFefXk2MGZClPHEhDapZ7l_UUmpkUcUuqjwlymGhQ1mT4vz43jYEHIEAF2ZNHPeyAM3w",
+                    "width": 1960
+                }
+            ],
+            "place_id": "ChIJO-RIn9o0K4gRQg4hqNH98Rc",
+            "plus_code": {
+                "compound_code": "JJX5+G6 Toronto Ontario",
+                "global_code": "87M2JJX5+G6"
+            },
+            "rating": 4.3,
+            "reference": "ChIJO-RIn9o0K4gRQg4hqNH98Rc",
+            "types": ["gym", "health", "point_of_interest", "establishment"],
+            "user_ratings_total": 335
+        },
+        {
+            "formatted_address": "555 Richmond St W, Toronto, ON M5V 3B1 Canada",
+            "geometry": {
+                "location": {
+                    "lat": 43.6466218,
+                    "lng": -79.40234149999999
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 43.64801777989272,
+                        "lng": -79.40100967010727
+                    },
+                    "southwest": {
+                        "lat": 43.64531812010727,
+                        "lng": -79.40370932989271
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+            "id": "c5fd379183d419afb2996c03b1290ac922fe44a4",
+            "name": "GoodLife Fitness Toronto Richmond and Bathurst",
+            "opening_hours": {
+                "open_now": false
+            },
+            "photos": [
+                {
+                    "height": 3840,
+                    "html_attributions": [
+                        "\u003ca href=\"https://maps.google.com/maps/contrib/111838312747355657409/photos\"\u003eGoodLife Fitness\u003c/a\u003e"
+                    ],
+                    "photo_reference": "CmRaAAAAum36lr9gFzIIlbH8hDOv_rRtg6ubPbGJond-IJPV5JlCpIBymHqFT-uJOTEsOIpuY38w_1kmng5aZ_bl3Eu3j9tgaOZZox5Pb1kvDGRtGWZU9orrjpC5R6WfBdYJbwAzEhABebaeZ3tU0W6QbVCwqaFzGhQn7dUvdNXNkK4aKCHHzB9HzLsE7w",
+                    "width": 5760
+                }
+            ],
+            "place_id": "ChIJY510_d00K4gRB6cIJwTlVfc",
+            "plus_code": {
+                "compound_code": "JHWX+J3 Toronto Ontario",
+                "global_code": "87M2JHWX+J3"
+            },
+            "rating": 4,
+            "reference": "ChIJY510_d00K4gRB6cIJwTlVfc",
+            "types": ["gym", "health", "point_of_interest", "establishment"],
+            "user_ratings_total": 270
+        },
+        {
+            "formatted_address": "12 St Clair Ave E, Toronto, ON M4T 1L7 Canada",
+            "geometry": {
+                "location": {
+                    "lat": 43.6885209,
+                    "lng": -79.3931826
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 43.68976147989272,
+                        "lng": -79.39187197010729
+                    },
+                    "southwest": {
+                        "lat": 43.68706182010727,
+                        "lng": -79.39457162989272
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+            "id": "7f5180a1d57dc055251902109f8ca616824da2df",
+            "name": "GoodLife Fitness Toronto Yonge and St Clair",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 3120,
+                    "html_attributions": [
+                        "\u003ca href=\"https://maps.google.com/maps/contrib/114842505477372159901/photos\"\u003eChen Shaowei\u003c/a\u003e"
+                    ],
+                    "photo_reference": "CmRaAAAAl2TgwNkWLX7LLgbFnYU9M1dp1GANyMDIdtASYOQdtY3bzP0JL4iRELIYB80epoWkOMIaK9ayw8oNYUWpMr85_K5mDQng-QHX_gRxt5Z9LH3Vh55_NseLlxYF-r0dhwVFEhDd7J-8sDStf63QlW9C60dQGhTopvofnT71M1Pmx9Ou45ZNSGdngA",
+                    "width": 4208
+                }
+            ],
+            "place_id": "ChIJv9XXLEUzK4gR_weWnJJuaWY",
+            "plus_code": {
+                "compound_code": "MJQ4+CP Toronto Ontario",
+                "global_code": "87M2MJQ4+CP"
+            },
+            "rating": 3.9,
+            "reference": "ChIJv9XXLEUzK4gR_weWnJJuaWY",
+            "types": ["gym", "health", "point_of_interest", "establishment"],
+            "user_ratings_total": 237
+        },
+        {
+            "formatted_address": "280 Coxwell Ave, Toronto, ON M4L 3B6 Canada",
+            "geometry": {
+                "location": {
+                    "lat": 43.6732903,
+                    "lng": -79.3197979
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 43.67467592989271,
+                        "lng": -79.31828227010729
+                    },
+                    "southwest": {
+                        "lat": 43.67197627010727,
+                        "lng": -79.32098192989272
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+            "id": "c7d3373d7a91f67218fd0107269af140fb37d762",
+            "name": "GoodLife Fitness Toronto Coxwell and Gerrard",
+            "opening_hours": {
+                "open_now": false
+            },
+            "photos": [
+                {
+                    "height": 4128,
+                    "html_attributions": [
+                        "\u003ca href=\"https://maps.google.com/maps/contrib/112494413903344642652/photos\"\u003eLea Tian\u003c/a\u003e"
+                    ],
+                    "photo_reference": "CmRaAAAArf1pkoHLab9syfHrZi9KXCTG5qHCEZm-y0OFKW1tPxGL936DuYt169Sz11UAeyxM-bYB3Lxb23Pm-Utgw2zyK7b_1hwkZ7K0lZ0Kx09MiTyuBaAij76MnZwSBGbnuMyOEhBbSnEGnY55a5zD2ZT0WGZ_GhTrfWwSLBhydCVRJUl0wAdCSPiUyQ",
+                    "width": 2322
+                }
+            ],
+            "place_id": "ChIJCwEdb3bM1IkR-v1B4Z4mUJQ",
+            "plus_code": {
+                "compound_code": "MMFJ+83 Toronto Ontario",
+                "global_code": "87M2MMFJ+83"
+            },
+            "rating": 3.7,
+            "reference": "ChIJCwEdb3bM1IkR-v1B4Z4mUJQ",
+            "types": ["gym", "health", "point_of_interest", "establishment"],
+            "user_ratings_total": 187
+        },
+        {
+            "formatted_address": "21 McCaul St, Toronto, ON M5T 1V7 Canada",
+            "geometry": {
+                "location": {
+                    "lat": 43.65109,
+                    "lng": -79.389905
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 43.65242232989273,
+                        "lng": -79.38863532010728
+                    },
+                    "southwest": {
+                        "lat": 43.64972267010728,
+                        "lng": -79.39133497989272
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+            "id": "257fa4c888131ef401006974e0689821f6454e39",
+            "name": "GoodLife Fitness Toronto McCaul and Queen",
+            "opening_hours": {
+                "open_now": false
+            },
+            "photos": [
+                {
+                    "height": 3024,
+                    "html_attributions": [
+                        "\u003ca href=\"https://maps.google.com/maps/contrib/110362721360502296504/photos\"\u003eEileen Xue\u003c/a\u003e"
+                    ],
+                    "photo_reference": "CmRaAAAA370Pcwez8Vv_svqq_C_yqWGkQGcmeckbbJmHbWStlhWV4Gkq2Do0GZOtiW0t2VISXMZgcCxaSJmkvKEnBs99cm5Rb431woU1itrC_xyXNRKuX9pp6oD7E_6apYbRDdCdEhA4-sWu-2GyOX7DFe5iznCoGhRJ-EJv0y_9mO-THAnInJ4_Vw6Usg",
+                    "width": 4032
+                }
+            ],
+            "place_id": "ChIJMb-jwM80K4gRl7vRCS5oocs",
+            "plus_code": {
+                "compound_code": "MJ26+C2 Toronto Ontario",
+                "global_code": "87M2MJ26+C2"
+            },
+            "rating": 3.6,
+            "reference": "ChIJMb-jwM80K4gRl7vRCS5oocs",
+            "types": ["gym", "health", "point_of_interest", "establishment"],
+            "user_ratings_total": 137
+        },
+        {
+            "formatted_address": "36 Toronto St, 210, Toronto, ON M5C 2C5 Canada",
+            "geometry": {
+                "location": {
+                    "lat": 43.6505792,
+                    "lng": -79.3765365
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 43.65194822989272,
+                        "lng": -79.37510012010728
+                    },
+                    "southwest": {
+                        "lat": 43.64924857010728,
+                        "lng": -79.37779977989271
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+            "id": "9668214f19473c776973350c2ef148403ba81de2",
+            "name": "GoodLife Fitness Toronto Street Women's Only",
+            "opening_hours": {
+                "open_now": false
+            },
+            "photos": [
+                {
+                    "height": 4032,
+                    "html_attributions": [
+                        "\u003ca href=\"https://maps.google.com/maps/contrib/111622999421015713891/photos\"\u003ehamudi eid\u003c/a\u003e"
+                    ],
+                    "photo_reference": "CmRaAAAAUrpeq_6CxSbZR1HUlqMT6V_vdNpmQiLDoi7u1kDb1A5QFKPw7xC0-58i-EqNtwkdo7rZ1ocAaM0aktqA2pz5GQGKUq_2T6y2rcaXFgf_t7TACiB70rSNg5dq-4QQOcEPEhCgGWJ6sSy336y4jrY7rY_wGhSqI9ZFTyEw6-j7VY3XdnSJFGkRmg",
+                    "width": 3024
+                }
+            ],
+            "place_id": "ChIJQ8LKTjLL1IkRUfzPVA5MvTo",
+            "plus_code": {
+                "compound_code": "MJ2F+69 Toronto Ontario",
+                "global_code": "87M2MJ2F+69"
+            },
+            "rating": 4,
+            "reference": "ChIJQ8LKTjLL1IkRUfzPVA5MvTo",
+            "types": ["gym", "health", "point_of_interest", "establishment"],
+            "user_ratings_total": 76
+        }
+    ],
+    "status": "OK"
+}
