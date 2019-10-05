@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import User from './User';
 import GoogleMap from './GoogleMap';
 import WrapperdMap from './GoogleMap';
+import GeoLocation from './GeoLocation';
 
 export default class Partner extends Component {
     render() {
@@ -19,6 +20,7 @@ export default class Partner extends Component {
             <Container>
                 <CardDiv>
                     <User />
+                    <GeoLocation />
                 </CardDiv>
                 <CardDiv>
                     <WrapperdMap

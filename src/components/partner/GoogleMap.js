@@ -30,7 +30,6 @@ export class GoogleMaps extends Component {
     };
 
     render() {
-        // const { selectedGym } = this.state.selectedGym;
         return (
             <>
                 <GoogleMap
@@ -47,11 +46,6 @@ export class GoogleMaps extends Component {
                 >
                     {gymLocation.results.map(gym => {
                         return (
-                            // <InfoWIndow
-                            //     key={gym.place_id}
-                            //     lat={gym.geometry.location.lat}
-                            //     lng={gym.geometry.location.lng}
-                            // />
                             <Marker
                                 key={gym.place_id}
                                 position={{
