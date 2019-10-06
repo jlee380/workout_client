@@ -14,8 +14,37 @@ import gymIcon from 'assets/images/gym.svg';
 export class GoogleMaps extends Component {
     state = {
         selectedGym: null,
-        showInfo: '',
-        showInfoIndex: ''
+        lat: null,
+        lng: null
+    };
+
+    componentDidMount = () => {
+        // handling user location
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(
+                this.getCoordinates,
+                this.handlePermissionDenied
+            );
+        } else {
+            alert('Geolocation is not supported by this browser.');
+        }
+    };
+
+    getCoordinates = position => {
+        console.log(position.coords.latitude);
+        this.setState({
+            lat: position.coords.latitude,
+            lng: position.coords.longitude
+        });
+    };
+
+    handlePermissionDenied = error => {
+        if (error.code === error.PERMISSION_DENIED) {
+            this.setState({
+                lat: 43.653225,
+                lng: -79.383186
+            });
+        }
     };
 
     handleSelectedGym = gym => {
@@ -23,6 +52,7 @@ export class GoogleMaps extends Component {
             selectedGym: gym
         });
     };
+
     handleClose = () => {
         this.setState({
             selectedGym: null
@@ -32,9 +62,12 @@ export class GoogleMaps extends Component {
     render() {
         return (
             <>
+                <p>{console.log(this.state.lat)}</p>
+                <p>{console.log(this.state.lng)}</p>
+
                 <GoogleMap
                     defaultZoom={13}
-                    defaultCenter={{ lat: 43.653225, lng: -79.383186 }}
+                    defaultCenter={{ lat: this.state.lat, lng: this.state.lng }}
                     defaultOptions={{
                         disableDefaultUI: false,
                         draggable: true,

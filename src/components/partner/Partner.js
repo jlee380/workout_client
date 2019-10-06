@@ -3,8 +3,6 @@ import styled from 'styled-components';
 
 import User from './User';
 import GoogleMap from './GoogleMap';
-import WrapperdMap from './GoogleMap';
-import GeoLocation from './GeoLocation';
 
 export default class Partner extends Component {
     render() {
@@ -20,10 +18,9 @@ export default class Partner extends Component {
             <Container>
                 <CardDiv>
                     <User />
-                    <GeoLocation />
                 </CardDiv>
                 <CardDiv>
-                    <WrapperdMap
+                    <GoogleMap
                         googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=${process.env.REACT_APP_GOOGLE_KEY}`}
                         loadingElement={<div style={{ height: '100%' }} />}
                         containerElement={<div style={{ height: '100%' }} />}

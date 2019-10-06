@@ -1,5 +1,4 @@
 import React from 'react';
-import { geolocated } from 'react-geolocated';
 
 class GeoLocation extends React.Component {
     state = {
@@ -7,10 +6,11 @@ class GeoLocation extends React.Component {
         longitude: null
     };
     componentDidMount = () => {
-        console.log('getlocation is available', navigator.geolocation);
-
         if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(this.getCoordinates);
+            navigator.geolocation.getCurrentPosition(
+                this.getCoordinates,
+                this.handlePermissionDenied
+            );
         } else {
             alert('Geolocation is not supported by this browser.');
         }
@@ -22,6 +22,15 @@ class GeoLocation extends React.Component {
             latitude: position.coords.latitude,
             longitude: position.coords.longitude
         });
+    };
+
+    handlePermissionDenied = error => {
+        if (error.code === error.PERMISSION_DENIED) {
+            this.setState({
+                latitude: 43.653225,
+                longitude: -79.383186
+            });
+        }
     };
 
     render() {
