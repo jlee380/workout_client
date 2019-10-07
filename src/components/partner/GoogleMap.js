@@ -64,60 +64,67 @@ export class GoogleMaps extends Component {
             <>
                 <p>{console.log(this.state.lat)}</p>
                 <p>{console.log(this.state.lng)}</p>
-
-                <GoogleMap
-                    defaultZoom={13}
-                    defaultCenter={{ lat: this.state.lat, lng: this.state.lng }}
-                    defaultOptions={{
-                        disableDefaultUI: false,
-                        draggable: true,
-                        keyboardShortcuts: false,
-                        scaleControl: true,
-                        scrollwheel: true,
-                        styles: styles
-                    }}
-                >
-                    {gymLocation.results.map(gym => {
-                        return (
-                            <Marker
-                                key={gym.place_id}
+                {this.state.lat ? (
+                    <GoogleMap
+                        defaultZoom={13}
+                        defaultCenter={{
+                            lat: this.state.lat,
+                            lng: this.state.lng
+                        }}
+                        defaultOptions={{
+                            disableDefaultUI: false,
+                            draggable: true,
+                            keyboardShortcuts: false,
+                            scaleControl: true,
+                            scrollwheel: true,
+                            styles: styles
+                        }}
+                    >
+                        {gymLocation.results.map(gym => {
+                            return (
+                                <Marker
+                                    key={gym.place_id}
+                                    position={{
+                                        lat: gym.geometry.location.lat,
+                                        lng: gym.geometry.location.lng
+                                    }}
+                                    onClick={() => {
+                                        this.handleSelectedGym(gym);
+                                    }}
+                                    icon={{
+                                        url: gymIcon,
+                                        scaledSize: new window.google.maps.Size(
+                                            25,
+                                            25
+                                        )
+                                    }}
+                                />
+                            );
+                        })}
+                        {this.state.selectedGym && (
+                            <InfoWindow
                                 position={{
-                                    lat: gym.geometry.location.lat,
-                                    lng: gym.geometry.location.lng
+                                    lat: this.state.selectedGym.geometry
+                                        .location.lat,
+                                    lng: this.state.selectedGym.geometry
+                                        .location.lng
                                 }}
-                                onClick={() => {
-                                    this.handleSelectedGym(gym);
-                                }}
-                                icon={{
-                                    url: gymIcon,
-                                    scaledSize: new window.google.maps.Size(
-                                        25,
-                                        25
-                                    )
-                                }}
-                            />
-                        );
-                    })}
-                    {this.state.selectedGym && (
-                        <InfoWindow
-                            position={{
-                                lat: this.state.selectedGym.geometry.location
-                                    .lat,
-                                lng: this.state.selectedGym.geometry.location
-                                    .lng
-                            }}
-                            onCloseClick={this.handleClose}
-                        >
-                            <>
-                                <h2>{this.state.selectedGym.name}</h2>
-                                <p>
-                                    {this.state.selectedGym.formatted_address}
-                                </p>
-                                <p>N number of users work out here</p>
-                            </>
-                        </InfoWindow>
-                    )}
-                </GoogleMap>
+                                onCloseClick={this.handleClose}
+                            >
+                                <>
+                                    <h2>{this.state.selectedGym.name}</h2>
+                                    <p>
+                                        {
+                                            this.state.selectedGym
+                                                .formatted_address
+                                        }
+                                    </p>
+                                    <p>N number of users work out here</p>
+                                </>
+                            </InfoWindow>
+                        )}
+                    </GoogleMap>
+                ) : null}
             </>
         );
     }

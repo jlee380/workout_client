@@ -12,6 +12,7 @@ export default class Partner extends Component {
         `;
         const CardDiv = styled.div`
             flex: 50%;
+            height: calc(100vh - 80px);
             background-color: white;
         `;
         return (
