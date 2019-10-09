@@ -4,13 +4,20 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import 'semantic-ui-css/semantic.min.css';
-import { createStore, applyMiddleware } from 'redux';
+import { createStore, applyMiddleware, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
+
 import thunk from 'redux-thunk';
-import reducers from 'reducers/userReducer';
+import logger from 'redux-logger';
+
+import rootReducer from 'store/reducers/index';
+
 import 'dotenv';
 
-let store = createStore(reducers, applyMiddleware(thunk));
+import gymReducer from 'store/reducers/gymReducer';
+import userReducer from 'store/reducers/userReducer';
+// combineReducers({ gymReducer, userReducer })
+let store = createStore(rootReducer, applyMiddleware(thunk, logger));
 
 ReactDOM.render(
     <Provider store={store}>

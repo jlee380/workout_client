@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+
 import {
     GoogleMap,
     withScriptjs,
@@ -10,10 +13,10 @@ import {
 import * as gymLocation from 'data/gymData';
 import styles from './GoogleMapStyle.json';
 import gymIcon from 'assets/images/gym.svg';
+import selectedGymAction from 'store/actions/selectedGymAction';
 
-export class GoogleMaps extends Component {
+class GoogleMaps extends Component {
     state = {
-        selectedGym: null,
         lat: null,
         lng: null
     };
@@ -47,12 +50,6 @@ export class GoogleMaps extends Component {
         }
     };
 
-    handleSelectedGym = gym => {
-        this.setState({
-            selectedGym: gym
-        });
-    };
-
     handleClose = () => {
         this.setState({
             selectedGym: null
@@ -60,11 +57,11 @@ export class GoogleMaps extends Component {
     };
 
     render() {
+        const { gyms, selectedGym } = this.props;
         return (
             <>
-                <p>{console.log(this.state.lat)}</p>
-                <p>{console.log(this.state.lng)}</p>
-                {this.state.lat ? (
+                {console.log(selectedGym)}
+                {this.state.lat && this.state.lng ? (
                     <GoogleMap
                         defaultZoom={13}
                         defaultCenter={{
@@ -80,16 +77,18 @@ export class GoogleMaps extends Component {
                             styles: styles
                         }}
                     >
-                        {gymLocation.results.map(gym => {
+                        {gyms.map(gym => {
                             return (
                                 <Marker
-                                    key={gym.place_id}
+                                    key={gym._id}
                                     position={{
-                                        lat: gym.geometry.location.lat,
-                                        lng: gym.geometry.location.lng
+                                        lat: gym.lat,
+                                        lng: gym.lng
                                     }}
                                     onClick={() => {
-                                        this.handleSelectedGym(gym);
+                                        // this.handleSelectedGym(gym);
+                                        // this.props.onUserFetch(gym.user);
+                                        this.props.selectedGymAction(gym);
                                     }}
                                     icon={{
                                         url: gymIcon,
@@ -101,25 +100,28 @@ export class GoogleMaps extends Component {
                                 />
                             );
                         })}
-                        {this.state.selectedGym && (
+                        {selectedGym && (
                             <InfoWindow
                                 position={{
-                                    lat: this.state.selectedGym.geometry
-                                        .location.lat,
-                                    lng: this.state.selectedGym.geometry
-                                        .location.lng
+                                    lat: selectedGym.lat,
+                                    lng: selectedGym.lng
                                 }}
                                 onCloseClick={this.handleClose}
                             >
                                 <>
-                                    <h2>{this.state.selectedGym.name}</h2>
-                                    <p>
-                                        {
-                                            this.state.selectedGym
-                                                .formatted_address
-                                        }
-                                    </p>
-                                    <p>N number of users work out here</p>
+                                    <h3>{selectedGym.name}</h3>
+                                    <p>{selectedGym.formattedAddress}</p>
+                                    {selectedGym.user.length <= 1 ? (
+                                        <p>
+                                            {selectedGym.user.length} user works
+                                            out here
+                                        </p>
+                                    ) : (
+                                        <p>
+                                            {selectedGym.user.length} users work
+                                            out here
+                                        </p>
+                                    )}
                                 </>
                             </InfoWindow>
                         )}
@@ -130,6 +132,23 @@ export class GoogleMaps extends Component {
     }
 }
 
-const WrapperdMap = withScriptjs(withGoogleMap(GoogleMaps));
+const mapStateToProps = state => ({
+    gyms: state.gymReducer.gyms,
+    error: state.error,
+    pending: state.pending,
+    selectedGym: state.selectedGymReducer.selectedGym
+});
 
-export default WrapperdMap;
+const mapDispatchToProps = dispatch => {
+    return {
+        selectedGymAction: bindActionCreators(selectedGymAction, dispatch)
+    };
+};
+
+export const WrapperdMap = withScriptjs(withGoogleMap(GoogleMaps));
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(WrapperdMap);
+// export default WrapperdMap;

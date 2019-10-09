@@ -1,3 +1,5 @@
+import { BASE_URL } from 'environment';
+
 export const USER_FETCH_SUCCESS = 'USER_FETCH_SUCCESS';
 export const USER_FETCH_PENDING = 'USER_FETCH_PENDING';
 export const USER_FETCH_ERROR = 'USER_FETCH_ERROR';
@@ -5,7 +7,7 @@ export const USER_FETCH_ERROR = 'USER_FETCH_ERROR';
 const fetchUser = () => {
     return dispatch => {
         dispatch(fetchUserPending());
-        return fetch('http://localhost:5000/user')
+        return fetch(`${BASE_URL}/user`)
             .then(res => res.json())
             .then(data => {
                 if (data.error) {

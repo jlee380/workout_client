@@ -1,24 +1,32 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 
 import User from './User';
 import GoogleMap from './GoogleMap';
+import { Container, CardDiv } from './PartnerStyle';
+import fetchGym from 'store/actions/gymAction';
 
-export default class Partner extends Component {
+class Partner extends Component {
+    state = {
+        users: []
+    };
+
+    componentDidMount() {
+        this.props.fetchGym();
+    }
+
+    handleUserFetch = users => {
+        this.setState({
+            users
+        });
+    };
+
     render() {
-        const Container = styled.div`
-            display: flex;
-            list-style: none;
-        `;
-        const CardDiv = styled.div`
-            flex: 50%;
-            height: calc(100vh - 80px);
-            background-color: white;
-        `;
         return (
             <Container>
                 <CardDiv>
-                    <User />
+                    <User users={this.state.users} />
                 </CardDiv>
                 <CardDiv>
                     <GoogleMap
@@ -26,6 +34,8 @@ export default class Partner extends Component {
                         loadingElement={<div style={{ height: '100%' }} />}
                         containerElement={<div style={{ height: '100%' }} />}
                         mapElement={<div style={{ height: '100%' }} />}
+                        gyms={this.props.gyms}
+                        onUserFetch={this.handleUserFetch}
                     />
                 </CardDiv>
             </Container>
@@ -33,4 +43,21 @@ export default class Partner extends Component {
     }
 }
 
-// {process.env.REACT_APP_GOOGLE_KEY}
+// export default Partner;
+
+export const mapStateToProps = state => ({
+    gyms: state.gymReducer.gyms,
+    error: state.error,
+    pending: state.pending
+});
+
+const mapDispatchToProps = dispatch => {
+    return {
+        fetchGym: bindActionCreators(fetchGym, dispatch)
+    };
+};
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(Partner);

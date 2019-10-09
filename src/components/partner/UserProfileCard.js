@@ -5,17 +5,16 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 import image from './matthew.png';
-import fetchUserAction from 'actions/userAction';
+import fetchUser from 'store/actions/userAction';
 import SyncLoader from 'react-spinners/SyncLoader';
 
 class UserProfileCard extends Component {
-    componentWillMount() {
-        const { fetchUser } = this.props;
-        fetchUser();
+    componentDidMount() {
+        this.props.fetchUser();
     }
 
     render() {
-        const { users, error, pending } = this.props;
+        const { users, error, pending, selectedGym } = this.props;
 
         if (pending) {
             return (
@@ -48,14 +47,16 @@ class UserProfileCard extends Component {
                                     <Card className='card_wrpper'>
                                         <Image src={image} wrapped ui={false} />
                                         <Card.Content>
-                                            <Card.Header>Matthew</Card.Header>
+                                            <Card.Header>
+                                                {user.firstName}
+                                            </Card.Header>
                                             <Card.Meta>
                                                 <span className='date'>
                                                     Joined in 2019.SEP
                                                 </span>
                                             </Card.Meta>
                                             <Card.Description>
-                                                This is a primary location
+                                                {user.email}
                                             </Card.Description>
                                         </Card.Content>
                                         <Card.Content extra>
@@ -76,18 +77,17 @@ class UserProfileCard extends Component {
 }
 
 const mapStateToProps = state => ({
-    users: state.users,
+    users: state.userReducer.users,
+    selectedGym: state.selectedGymReducer.selectedGym,
     error: state.error,
     pending: state.pending
 });
 
-const mapDispatchToProps = dispatch =>
-    bindActionCreators(
-        {
-            fetchUser: fetchUserAction
-        },
-        dispatch
-    );
+const mapDispatchToProps = dispatch => {
+    return {
+        fetchUser: bindActionCreators(fetchUser, dispatch)
+    };
+};
 
 export default connect(
     mapStateToProps,
