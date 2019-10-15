@@ -6,6 +6,7 @@ import Footer from './layout/Footer';
 import Gym from './components/partner/Gym';
 import User from './components/partner/User';
 import Partner from './components/partner/Partner';
+import Signup from './components/signup/Signup';
 
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Home from './components/Home';
@@ -23,6 +24,7 @@ function App() {
                     <Route path='/partner' component={Partner} />
                     <Route path='/gym' component={Gym} />
                     <Route path='/user' component={User} />
+                    <Route path='/signup' component={Signup} />
                     <Footer>footer text</Footer>
                 </Wrapper>
             </Router>

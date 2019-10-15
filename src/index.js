@@ -8,16 +8,15 @@ import { createStore, applyMiddleware, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
 
 import thunk from 'redux-thunk';
-import logger from 'redux-logger';
-
+import { composeWithDevTools } from 'redux-devtools-extension';
 import rootReducer from 'store/reducers/index';
 
 import 'dotenv';
 
-import gymReducer from 'store/reducers/gymReducer';
-import userReducer from 'store/reducers/userReducer';
-// combineReducers({ gymReducer, userReducer })
-let store = createStore(rootReducer, applyMiddleware(thunk, logger));
+let store = createStore(
+    rootReducer,
+    composeWithDevTools(applyMiddleware(thunk))
+);
 
 ReactDOM.render(
     <Provider store={store}>

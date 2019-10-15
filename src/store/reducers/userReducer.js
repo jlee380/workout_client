@@ -4,6 +4,8 @@ import {
     USER_FETCH_SUCCESS
 } from 'store/actions/userAction';
 
+import { USERS_IN_A_GYM } from 'store/actions/selectedGymAction';
+
 const initialState = {
     users: [],
     pending: false,
@@ -26,6 +28,12 @@ const userReducer = (state = initialState, action) => {
         return {
             ...state,
             pending: false,
+            error: action.error
+        };
+    } else if (action.type === USERS_IN_A_GYM) {
+        return {
+            ...state,
+            users: action.usersInSelectedGym,
             error: action.error
         };
     } else {

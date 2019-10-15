@@ -1,4 +1,4 @@
-import { SELECTED_GYM } from 'store/actions/selectedGymAction';
+import { SELECTED_GYM, UNSELECTED_GYM } from 'store/actions/selectedGymAction';
 
 const initialState = {
     selectedGym: null
@@ -9,6 +9,12 @@ const selectedGymReducer = (state = initialState, action) => {
         return {
             ...state,
             selectedGym: action.selectedGym,
+            error: action.error
+        };
+    } else if (action.type === UNSELECTED_GYM) {
+        return {
+            ...state,
+            selectedGym: null,
             error: action.error
         };
     } else {

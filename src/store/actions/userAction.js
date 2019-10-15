@@ -7,7 +7,7 @@ export const USER_FETCH_ERROR = 'USER_FETCH_ERROR';
 const fetchUser = () => {
     return dispatch => {
         dispatch(fetchUserPending());
-        return fetch(`${BASE_URL}/user`)
+        return fetch(`${BASE_URL}/users`)
             .then(res => res.json())
             .then(data => {
                 if (data.error) {

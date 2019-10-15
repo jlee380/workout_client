@@ -10,10 +10,12 @@ import {
     InfoWindow
 } from 'react-google-maps';
 
-import * as gymLocation from 'data/gymData';
 import styles from './GoogleMapStyle.json';
 import gymIcon from 'assets/images/gym.svg';
-import selectedGymAction from 'store/actions/selectedGymAction';
+import selectedGymAction, {
+    unselectedGymAction,
+    usersInSelectedGymAction
+} from 'store/actions/selectedGymAction';
 
 class GoogleMaps extends Component {
     state = {
@@ -50,17 +52,10 @@ class GoogleMaps extends Component {
         }
     };
 
-    handleClose = () => {
-        this.setState({
-            selectedGym: null
-        });
-    };
-
     render() {
         const { gyms, selectedGym } = this.props;
         return (
             <>
-                {console.log(selectedGym)}
                 {this.state.lat && this.state.lng ? (
                     <GoogleMap
                         defaultZoom={13}
@@ -78,6 +73,7 @@ class GoogleMaps extends Component {
                         }}
                     >
                         {gyms.map(gym => {
+                            console.log(gym);
                             return (
                                 <Marker
                                     key={gym._id}
@@ -86,9 +82,10 @@ class GoogleMaps extends Component {
                                         lng: gym.lng
                                     }}
                                     onClick={() => {
-                                        // this.handleSelectedGym(gym);
-                                        // this.props.onUserFetch(gym.user);
                                         this.props.selectedGymAction(gym);
+                                        this.props.usersInSelectedGymAction(
+                                            gym.users
+                                        );
                                     }}
                                     icon={{
                                         url: gymIcon,
@@ -106,20 +103,20 @@ class GoogleMaps extends Component {
                                     lat: selectedGym.lat,
                                     lng: selectedGym.lng
                                 }}
-                                onCloseClick={this.handleClose}
+                                onCloseClick={this.props.unselectedGymAction}
                             >
                                 <>
                                     <h3>{selectedGym.name}</h3>
                                     <p>{selectedGym.formattedAddress}</p>
-                                    {selectedGym.user.length <= 1 ? (
+                                    {selectedGym.users.length <= 1 ? (
                                         <p>
-                                            {selectedGym.user.length} user works
-                                            out here
+                                            {selectedGym.users.length} user
+                                            works out here
                                         </p>
                                     ) : (
                                         <p>
-                                            {selectedGym.user.length} users work
-                                            out here
+                                            {selectedGym.users.length} users
+                                            work out here
                                         </p>
                                     )}
                                 </>
@@ -141,7 +138,12 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => {
     return {
-        selectedGymAction: bindActionCreators(selectedGymAction, dispatch)
+        selectedGymAction: bindActionCreators(selectedGymAction, dispatch),
+        unselectedGymAction: bindActionCreators(unselectedGymAction, dispatch),
+        usersInSelectedGymAction: bindActionCreators(
+            usersInSelectedGymAction,
+            dispatch
+        )
     };
 };
 
