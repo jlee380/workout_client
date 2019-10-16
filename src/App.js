@@ -1,4 +1,6 @@
 import React from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+
 import Wrapper from './layout/Wrapper';
 import Navbar from './components/navbar/Navbar';
 import Header from './layout/Header';
@@ -7,8 +9,6 @@ import Gym from './components/partner/Gym';
 import User from './components/partner/User';
 import Partner from './components/partner/Partner';
 import Signup from './components/signup/Signup';
-
-import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Home from './components/Home';
 
 // import 'bootstrap/dist/css/bootsrap.min.css';

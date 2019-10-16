@@ -28,9 +28,7 @@ const Navbar = () => {
                     <A to='about'>CONTACT US</A>
                 </NavItem>
                 <NavItem>
-                    <SignUpLink
-                        to={{ pathname: '/signup', state: { modal: true } }}
-                    >
+                    <SignUpLink to={{ pathname: '/signup' }}>
                         SIGN UP
                     </SignUpLink>
                 </NavItem>
