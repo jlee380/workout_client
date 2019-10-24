@@ -1,4 +1,6 @@
 import firebase from 'firebase';
+import 'firebase/firestore';
+import 'firebase/auth';
 
 var firebaseConfig = {
     apiKey: process.env.REACT_APP_GOOGLE_FIREBASE_AUTHENTICATION,

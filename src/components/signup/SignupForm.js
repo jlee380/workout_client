@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+
 import { Form } from 'semantic-ui-react';
+import createUserAction from 'store/actions/createUserAction';
 
 const options = [
     { key: 'm', text: 'Male', value: 'male' },
@@ -11,8 +14,9 @@ class SignupForm extends Component {
     state = {
         firstName: '',
         lastName: '',
-        gender: 0,
+        gender: '',
         email: '',
+        password: '',
         username: ''
     };
 
@@ -23,7 +27,7 @@ class SignupForm extends Component {
     };
     handleSubmit = e => {
         e.preventDefault();
-        console.log(this.state);
+        this.props.createUserAction(this.state);
     };
     render() {
         return (
@@ -35,6 +39,7 @@ class SignupForm extends Component {
                         placeholder='First name'
                         id='firstName'
                         onChange={this.handleChange}
+                        required
                     />
                     <Form.Input
                         fluid
@@ -42,6 +47,7 @@ class SignupForm extends Component {
                         placeholder='Last name'
                         id='lastName'
                         onChange={this.handleChange}
+                        required
                     />
 
                     <Form.Select
@@ -53,20 +59,32 @@ class SignupForm extends Component {
                         onChange={this.handleChange}
                     />
                 </Form.Group>
-                <Form.Group widths='equal'>
+                <Form.Group widths={3}>
                     <Form.Input
                         fluid
                         label='Email'
                         placeholder='Email'
                         id='email'
                         onChange={this.handleChange}
+                        required
+                    />
+                </Form.Group>
+                <Form.Group widths='equal'>
+                    <Form.Input
+                        fluid
+                        label='Password'
+                        placeholder='password'
+                        id='password'
+                        onChange={this.handleChange}
+                        required
                     />
                     <Form.Input
                         fluid
-                        label='Username (optinal)'
-                        placeholder='Username'
-                        id='username'
+                        label='Confirm Password'
+                        placeholder='Confirm Password'
+                        id='ConfirmPassword'
                         onChange={this.handleChange}
+                        required
                     />
                 </Form.Group>
                 <Form.Button>Submit</Form.Button>
@@ -75,4 +93,11 @@ class SignupForm extends Component {
     }
 }
 
-export default SignupForm;
+const mapDispatchToProps = dispatch => ({
+    createUserAction: user => dispatch(createUserAction(user))
+});
+
+export default connect(
+    null,
+    mapDispatchToProps
+)(SignupForm);

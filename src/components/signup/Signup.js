@@ -44,7 +44,7 @@ class Signup extends Component {
                         </Modal.Description>
                     </Modal.Content>
                     <button onClick={this.props.toggleSignInUpAction}>
-                        {toggleSignInUp ? 'Sign up' : 'Sign In'}
+                        {toggleSignInUp ? 'Sign In' : 'Sign up'}
                     </button>
                 </Modal>
             </div>

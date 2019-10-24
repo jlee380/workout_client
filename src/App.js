@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
+import fire from 'config/firebase';
 
 import Wrapper from './layout/Wrapper';
 import Navbar from './components/navbar/Navbar';
@@ -13,23 +14,25 @@ import Home from './components/Home';
 
 // import 'bootstrap/dist/css/bootsrap.min.css';
 
-function App() {
-    return (
-        <div className='app'>
-            <Router>
-                <Wrapper>
-                    <Navbar />
-                    <Header></Header>
-                    <Route path='/' exact component={Home} />
-                    <Route path='/partner' component={Partner} />
-                    <Route path='/gym' component={Gym} />
-                    <Route path='/user' component={User} />
-                    <Route path='/signup' component={Signup} />
-                    <Footer>footer text</Footer>
-                </Wrapper>
-            </Router>
-        </div>
-    );
+class App extends Component {
+    render() {
+        return (
+            <div className='app'>
+                <Router>
+                    <Wrapper>
+                        <Navbar />
+                        <Header></Header>
+                        <Route path='/' exact component={Home} />
+                        <Route path='/partner' component={Partner} />
+                        <Route path='/gym' component={Gym} />
+                        <Route path='/user' component={User} />
+                        <Route path='/signup' component={Signup} />
+                        <Footer>footer text</Footer>
+                    </Wrapper>
+                </Router>
+            </div>
+        );
+    }
 }
 
 export default App;
