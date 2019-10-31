@@ -50,6 +50,8 @@ export const SignUpLink = styled(A)`
     background-color: #173839;
 `;
 
+export const SignedInLink = styled(A)``;
+
 export const Img = styled.img`
     background-color: white;
     width: 217px;

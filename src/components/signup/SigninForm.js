@@ -5,6 +5,7 @@ import { withRouter } from 'react-router-dom';
 
 import { Form } from 'semantic-ui-react';
 import { closeModalAction } from 'store/actions/signupAction';
+import signInUserAction from 'store/actions/signInUserAction';
 
 class SigninForm extends Component {
     state = {
@@ -19,7 +20,6 @@ class SigninForm extends Component {
 
     authListener() {
         fire.auth().onAuthStateChanged(user => {
-            console.log(user);
             if (user) {
                 this.setState({ user });
             } else {
@@ -35,14 +35,12 @@ class SigninForm extends Component {
     };
     handleSubmit = e => {
         e.preventDefault();
-        fire.auth()
-            .signInWithEmailAndPassword(this.state.email, this.state.password)
-            .then(u => {})
-            .catch(err => {
-                console.log(err);
-            });
-        this.props.closeModalAction();
-        this.props.history.push('/');
+        console.log(this.state.email, this.state.password);
+        this.props.signInUserAction(this.state);
+        if (!this.props.error) {
+            this.props.closeModalAction();
+            this.props.history.push('/');
+        }
     };
 
     handleSignout = () => {
@@ -54,6 +52,7 @@ class SigninForm extends Component {
     render() {
         return (
             <>
+                {console.log(this.props.error)}
                 {this.state.user ? (
                     <>
                         <div>You are logged in successfully</div>
@@ -86,13 +85,21 @@ class SigninForm extends Component {
     }
 }
 
+const mapPropsToState = state => {
+    console.log(state);
+    return {
+        error: state.error
+    };
+};
+
 const mapDispatchToProps = dispatch => ({
-    closeModalAction: () => dispatch(closeModalAction())
+    closeModalAction: () => dispatch(closeModalAction()),
+    signInUserAction: credential => dispatch(signInUserAction(credential))
 });
 
 export default withRouter(
     connect(
-        null,
+        mapPropsToState,
         mapDispatchToProps
     )(SigninForm)
 );

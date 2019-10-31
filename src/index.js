@@ -6,37 +6,38 @@ import * as serviceWorker from './serviceWorker';
 import 'semantic-ui-css/semantic.min.css';
 import { createStore, applyMiddleware, compose } from 'redux';
 import { Provider } from 'react-redux';
-import firebase from 'firebase/app';
-import 'firebase/auth';
-
-import thunk from 'redux-thunk';
 import { composeWithDevTools } from 'redux-devtools-extension';
-import rootReducer from 'store/reducers/index';
-import { ReactReduxFirebaseProvider } from 'react-redux-firebase';
+import { ReactReduxFirebaseProvider, getFirebase } from 'react-redux-firebase';
+import { createFirestoreInstance } from 'redux-firestore';
+
+import 'firebase/database';
+import thunk from 'redux-thunk';
+import firebase from 'firebase/app';
 
 import 'dotenv';
 
-// const rrfConfig = {
-//     userProfile: 'users'
-// };
+import rootReducer from 'store/reducers/index';
 
-// const rrfProps = {
-//     firebase,
-//     config: rrfConfig,
-//     dispatch: store.dispatch
-//     // createFirestoreInstance // <- needed if using firestore
-// };
+const middleware = [thunk.withExtraArgument(getFirebase)];
 
 let store = createStore(
     rootReducer,
-    composeWithDevTools(applyMiddleware(thunk))
+    {},
+    composeWithDevTools(applyMiddleware(...middleware))
 );
+
+const rrfProps = {
+    firebase,
+    config: {},
+    dispatch: store.dispatch,
+    createFirestoreInstance
+};
 
 ReactDOM.render(
     <Provider store={store}>
-        {/* <ReactReduxFirebaseProvider {...rrfProps}> */}
-        <App />
-        {/* </ReactReduxFirebaseProvider> */}
+        <ReactReduxFirebaseProvider {...rrfProps}>
+            <App />
+        </ReactReduxFirebaseProvider>
     </Provider>,
     document.getElementById('root')
 );

@@ -10,7 +10,8 @@ import {
     A,
     Img,
     LogoLink,
-    SignUpLink
+    SignUpLink,
+    SignedInLink
 } from './NavbarStyled';
 import Logo from 'assets/images/logo.png';
 
@@ -46,6 +47,7 @@ class Navbar extends Component {
                         >
                             SIGN UP
                         </SignUpLink>
+                        {/* <SignedInLink>My Profile</SignedInLink> */}
                     </NavItem>
                 </NavItems>
             </Nav>
@@ -53,13 +55,17 @@ class Navbar extends Component {
     }
 }
 
+const mapStateToProps = state => {
+    return {};
+};
+
 const mapDispatchToProps = dispatch => ({
     openModalAction: () => dispatch(openModalAction())
 });
 
 export default withRouter(
     connect(
-        null,
+        mapStateToProps,
         mapDispatchToProps
     )(Navbar)
 );
