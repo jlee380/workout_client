@@ -1,23 +1,21 @@
-# Project Title
-
-Workout Together
-
-## Getting Started
+# Workout Together
 
 This is a personal project to help people to find a workout partner near their workout place.
 
 ### How it works
 
-There is a Google map displaying all Goodlife locations in Toronto. Users can register themselves in the locations to appear in a website so that other people can reach out to them.
+There is a Google map(Google Maps API) displaying all Goodlife locations(Google Places API) in Toronto. Users can register themselves in the locations to appear in a website so that other people can reach out to them.
 [Take a glance](https://imgur.com/a/Jz3yyHH)
 
 ### Present Features
 
 * Sign up
-* Login
+* Sign In
 * Finding a partner
+* Google maps with workout locations
 
 ### Upcoming Features
 
-* Chat
-* 
+* Chatting
+* Adding friends
+* Reviews
