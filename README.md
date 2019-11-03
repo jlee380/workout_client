@@ -19,3 +19,13 @@ There is a Google map(Google Maps API) displaying all Goodlife locations(Google 
 * Chatting
 * Adding friends
 * Reviews
+
+
+- Auth 
+  - Google firebase auth
+  
+- Google Maps
+  - It has user's locations and Goodlife locations using Google Maps API and Google Places API
+  - Users can register themselves in their workout locations
+  - Users can click on each locations and find their workout partners
+  - Users can talk each other through built in a chat app
