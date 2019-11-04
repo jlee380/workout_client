@@ -16,8 +16,7 @@ class SignupForm extends Component {
         lastName: '',
         gender: '',
         email: '',
-        password: '',
-        username: ''
+        password: ''
     };
 
     handleChange = e => {

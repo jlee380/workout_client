@@ -7,8 +7,8 @@ import 'semantic-ui-css/semantic.min.css';
 import { createStore, applyMiddleware, compose } from 'redux';
 import { Provider } from 'react-redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
-import { ReactReduxFirebaseProvider, getFirebase } from 'react-redux-firebase';
-import { createFirestoreInstance } from 'redux-firestore';
+import { reactReduxFirebase, getFirebase } from 'react-redux-firebase';
+import { reduxFirestore, getFirestore } from 'redux-firestore';
 
 import 'firebase/database';
 import thunk from 'redux-thunk';
@@ -18,26 +18,26 @@ import 'dotenv';
 
 import rootReducer from 'store/reducers/index';
 
-const middleware = [thunk.withExtraArgument(getFirebase)];
+const middleware = [thunk.withExtraArgument({ getFirebase, getFirestore })];
+
+const rrfConfig = {
+    userProfile: 'users',
+    useFirestoreForProfile: true // Firestore for Profile instead of Realtime DB
+};
 
 let store = createStore(
     rootReducer,
     {},
-    composeWithDevTools(applyMiddleware(...middleware))
+    composeWithDevTools(
+        reactReduxFirebase(firebase, rrfConfig),
+        reduxFirestore(firebase),
+        applyMiddleware(...middleware)
+    )
 );
-
-const rrfProps = {
-    firebase,
-    config: {},
-    dispatch: store.dispatch,
-    createFirestoreInstance
-};
 
 ReactDOM.render(
     <Provider store={store}>
-        <ReactReduxFirebaseProvider {...rrfProps}>
-            <App />
-        </ReactReduxFirebaseProvider>
+        <App />
     </Provider>,
     document.getElementById('root')
 );

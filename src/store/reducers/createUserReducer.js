@@ -13,7 +13,7 @@ const createUserReducer = (state = initialState, action) => {
         case CREATE_USER_SUCCESS:
             return {
                 ...state,
-                newUser: action.user
+                newUser: action.newUser
             };
         case CREATE_USER_ERROR:
             return {
