@@ -1,4 +1,8 @@
-import { SIGN_IN_SUCCESS, SIGN_IN_ERROR } from '../actions/signInUserAction';
+import {
+    SIGN_IN_SUCCESS,
+    SIGN_IN_ERROR,
+    SIGN_OUT_SUCCESS
+} from '../actions/signInUserAction';
 
 const initialState = {
     error: null
@@ -17,6 +21,11 @@ const signInUserReducer = (state = initialState, action) => {
             return {
                 ...state,
                 error: action.error
+            };
+        case SIGN_OUT_SUCCESS:
+            return {
+                ...state,
+                error: null
             };
         default:
             return {

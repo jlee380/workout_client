@@ -37,10 +37,10 @@ class SigninForm extends Component {
         e.preventDefault();
         console.log(this.state.email, this.state.password);
         this.props.signInUserAction(this.state);
-        if (!this.props.error) {
-            this.props.closeModalAction();
-            this.props.history.push('/');
-        }
+        // if (!this.props.error) {
+        //     this.props.closeModalAction();
+        //     this.props.history.push('/');
+        // }
     };
 
     handleSignout = () => {
@@ -50,9 +50,9 @@ class SigninForm extends Component {
     };
 
     render() {
+        const { error } = this.props;
         return (
             <>
-                {console.log(this.props.error)}
                 {this.state.user ? (
                     <>
                         <div>You are logged in successfully</div>

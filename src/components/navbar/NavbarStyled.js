@@ -50,7 +50,17 @@ export const SignUpLink = styled(A)`
     background-color: #173839;
 `;
 
-export const SignedInLink = styled(A)``;
+export const SignedInLink = styled(A)`
+    display: inline-block;
+    height: 75px;
+    width: 205px;
+    position: relative;
+    bottom: 13px;
+    text-align: center;
+    line-height: 45px;
+    color: white;
+    background-color: #173839;
+`;
 
 export const Img = styled.img`
     background-color: white;
