@@ -17,6 +17,7 @@ const createUserAction = newUser => {
                         .collection('users')
                         .doc(result.user.uid)
                         .set({
+                            email: newUser.email,
                             firstName: newUser.firstName,
                             lastName: newUser.lastName,
                             gender: newUser.gender,

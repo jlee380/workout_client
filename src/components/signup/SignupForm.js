@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import { Form } from 'semantic-ui-react';
+import { Form, Message } from 'semantic-ui-react';
 import createUserAction from 'store/actions/createUserAction';
 
 const options = [
@@ -16,7 +16,12 @@ class SignupForm extends Component {
         lastName: '',
         gender: '',
         email: '',
-        password: ''
+        password: '',
+
+        firstNameError: '',
+        lastNameError: '',
+        emailError: '',
+        passwordError: ''
     };
 
     handleChange = e => {
@@ -24,16 +29,134 @@ class SignupForm extends Component {
             [e.target.id]: e.target.value
         });
     };
+
     handleSubmit = e => {
         e.preventDefault();
-        this.props.createUserAction(this.state);
+
+        const err = this.handleFormValidation();
+
+        if (!err) {
+            this.setState({
+                firstName: '',
+                lastName: '',
+                gender: '',
+                email: '',
+                password: '',
+                confirmPassword: '',
+
+                firstNameError: '',
+                lastNameError: '',
+                emailError: '',
+                passwordError: ''
+            });
+            this.props.createUserAction(this.state);
+        }
     };
+
+    handleIsErrorFree = () => {
+        let error = null;
+        if (
+            !!this.state.firstNameError ||
+            !!this.state.lastNameError ||
+            !!this.state.emailError ||
+            !!this.state.passwordError
+        ) {
+            error = true;
+        } else {
+            error = false;
+        }
+        return error;
+    };
+
+    handleFormValidation = () => {
+        let error = false;
+        const {
+            firstName,
+            lastName,
+            email,
+            password,
+            confirmPassword
+        } = this.state;
+
+        const errors = {
+            firstNameError: '',
+            lastNameError: '',
+            emailError: '',
+            passwordError: ''
+        };
+
+        if (firstName.length < 2) {
+            error = true;
+            errors.firstNameError = 'First name must be at least 2 characters';
+        }
+
+        if (lastName.length < 2) {
+            error = true;
+            errors.lastNameError = 'Last name must be at least 2 characters';
+        }
+
+        if (!email) {
+            error = true;
+            errors.emailError = 'Requires email';
+        } else if (email.indexOf('@') === -1) {
+            errors.emailError = 'Email should contain @ sign';
+        } else if (email.indexOf('.') === -1) {
+            errors.emailError = 'Email should contain at least one dot';
+        }
+
+        if (!password) {
+            error = true;
+            errors.passwordError = 'Requires password';
+        } else if (password != confirmPassword) {
+            error = true;
+            errors.passwordError = "Passwords don't match";
+        }
+
+        this.setState({
+            ...this.state,
+            ...errors
+        });
+        console.log(this.state.firstNameError);
+        return error;
+    };
+
+    handleErrorMessages = () => {
+        const errorMsgArr = [];
+
+        const {
+            firstNameError,
+            lastNameError,
+            emailError,
+            passwordError
+        } = this.state;
+
+        const arr = [firstNameError, lastNameError, emailError, passwordError];
+
+        arr.map(errorMsg => {
+            if (errorMsg) {
+                errorMsgArr.push(errorMsg);
+            }
+        });
+
+        return errorMsgArr;
+    };
+
     render() {
+        const { authError } = this.props;
+        const {
+            firstNameError,
+            lastNameError,
+            emailError,
+            passwordError
+        } = this.state;
+
         return (
             <>
-                <Form>
+                {console.log(this.handleErrorMessages())}
+                <Form error={this.handleIsErrorFree()}>
                     <Form.Group widths='equal'>
                         <Form.Input
+                            error={!!firstNameError}
                             fluid
                             label='First name'
                             placeholder='First name'
@@ -42,6 +165,7 @@ class SignupForm extends Component {
                             required
                         />
                         <Form.Input
+                            error={!!lastNameError}
                             fluid
                             label='Last name'
                             placeholder='Last name'
@@ -61,6 +185,7 @@ class SignupForm extends Component {
                     </Form.Group>
                     <Form.Group widths={3}>
                         <Form.Input
+                            error={!!emailError}
                             fluid
                             label='Email'
                             placeholder='Email'
@@ -71,6 +196,7 @@ class SignupForm extends Component {
                     </Form.Group>
                     <Form.Group widths='equal'>
                         <Form.Input
+                            error={!!passwordError}
                             fluid
                             type='password'
                             label='Password'
@@ -80,15 +206,21 @@ class SignupForm extends Component {
                             required
                         />
                         <Form.Input
+                            error={!!passwordError}
                             fluid
                             type='password'
                             label='Confirm Password'
                             placeholder='Confirm Password'
-                            id='ConfirmPassword'
+                            id='confirmPassword'
                             onChange={this.handleChange}
                             required
                         />
                     </Form.Group>
+                    <Message
+                        error
+                        header='Something went wrong!'
+                        list={this.handleErrorMessages()}
+                    />
                     <Form.Button onClick={this.handleSubmit}>
                         Submit
                     </Form.Button>
@@ -99,7 +231,9 @@ class SignupForm extends Component {
 }
 
 const mapPropsToState = state => {
-    return {};
+    return {
+        authError: state.createUserReducer.error
+    };
 };
 
 const mapDispatchToProps = dispatch => ({

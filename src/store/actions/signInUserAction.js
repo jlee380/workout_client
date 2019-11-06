@@ -3,7 +3,7 @@ export const SIGN_IN_ERROR = 'SIGN_IN_ERROR';
 export const SIGN_OUT_SUCCESS = 'SIGN_OUT_SUCCESS';
 
 const signInUserAction = credential => {
-    return (dispatch, getState, getFirebase) => {
+    return (dispatch, getState, { getFirebase }) => {
         const firebase = getFirebase();
 
         firebase
@@ -17,7 +17,7 @@ const signInUserAction = credential => {
 };
 
 export const signOutUserAction = () => {
-    return (dispatch, getState, getFirebase) => {
+    return (dispatch, getState, { getFirebase }) => {
         const firebase = getFirebase();
 
         firebase
