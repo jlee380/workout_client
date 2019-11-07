@@ -11,13 +11,11 @@ const initialState = {
 const signInUserReducer = (state = initialState, action) => {
     switch (action.type) {
         case SIGN_IN_SUCCESS:
-            console.log('Logged In');
             return {
                 ...state,
                 error: null
             };
         case SIGN_IN_ERROR:
-            console.log('Logged in fails');
             return {
                 ...state,
                 error: action.error

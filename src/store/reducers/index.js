@@ -9,6 +9,7 @@ import selectedGymReducer from './selectedGymReducer';
 import signupReducer from './signupReducer';
 import createUserReducer from './createUserReducer';
 import signInUserReducer from './signInUserReducer';
+import selectedUserReducer from './selectedUserReducer';
 
 const rootReducer = combineReducers({
     gymReducer,
@@ -18,7 +19,8 @@ const rootReducer = combineReducers({
     createUserReducer,
     firestore: firestoreReducer,
     firebase: firebaseReducer,
-    signInUserReducer
+    signInUserReducer,
+    selectedUser: selectedUserReducer
 });
 
 export default rootReducer;
