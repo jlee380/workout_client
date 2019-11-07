@@ -31,7 +31,7 @@ class Signup extends Component {
         return (
             <div>
                 <Modal open={modal}>
-                    <Button onClick={closeModalAction} to='/'>
+                    <Button onClick={closeModalAction()} to='/'>
                         X
                     </Button>
                     <Modal.Header>

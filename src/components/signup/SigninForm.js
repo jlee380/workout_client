@@ -2,16 +2,26 @@ import React, { Component } from 'react';
 import fire from 'config/firebase';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
+import { Form, Button } from 'semantic-ui-react';
+import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
 
-import { Form } from 'semantic-ui-react';
 import { closeModalAction } from 'store/actions/signupAction';
 import signInUserAction from 'store/actions/signInUserAction';
+import { relative } from 'upath';
 
 class SigninForm extends Component {
     state = {
         email: '',
         password: '',
         user: {}
+    };
+
+    uiConfig = {
+        signInFlow: 'popup',
+        signInOptions: [fire.auth.GoogleAuthProvider.PROVIDER_ID],
+        callbacks: {
+            signInSuccess: () => false
+        }
     };
 
     componentDidMount() {
@@ -51,6 +61,17 @@ class SigninForm extends Component {
 
     render() {
         const { error } = this.props;
+        const submitButton = {
+            fontWeight: 500,
+            height: '40px',
+            lineHeight: 'normal',
+            maxWidth: '80px',
+            minHeight: '40px',
+            padding: '8px 16px',
+            textAlign: 'left',
+            width: '70%',
+            marginTop: '17px'
+        };
         return (
             <>
                 {this.state.user ? (
@@ -59,26 +80,34 @@ class SigninForm extends Component {
                         <button onClick={this.handleSignout}>Sing out</button>
                     </>
                 ) : (
-                    <Form onSubmit={this.handleSubmit}>
-                        <Form.Group widths='equal'>
-                            <Form.Input
-                                fluid
-                                label='Email'
-                                placeholder='Email'
-                                id='email'
-                                onChange={this.handleChange}
-                            />
+                    <form onSubmit={this.handleSubmit}>
+                        <input
+                            fluid
+                            placeholder='Email'
+                            id='email'
+                            onChange={this.handleChange}
+                        />
 
-                            <Form.Input
-                                fluid
-                                label='Password'
-                                placeholder='Password'
-                                id='password'
-                                onChange={this.handleChange}
+                        <input
+                            fluid
+                            placeholder='Password'
+                            id='password'
+                            onChange={this.handleChange}
+                        />
+                        <div
+                            style={{
+                                display: 'flex',
+                                justifyContent: 'space-between'
+                            }}
+                        >
+                            <Button style={submitButton}>Submit</Button>
+                            <StyledFirebaseAuth
+                                style={{}}
+                                uiConfig={this.uiConfig}
+                                firebaseAuth={fire.auth()}
                             />
-                        </Form.Group>
-                        <Form.Button>Submit</Form.Button>
-                    </Form>
+                        </div>
+                    </form>
                 )}
             </>
         );

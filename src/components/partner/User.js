@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import SimpleBar from 'simplebar-react';
 import 'simplebar/dist/simplebar.min.css';
+import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 import './User.css';
 import {
@@ -12,10 +14,17 @@ import {
     GymLocation
 } from './UserStyle';
 import UserProfileCard from './UserProfileCard';
+import { openModalAction } from 'store/actions/signupAction';
 
-export default class User extends Component {
+import fetchUser from 'store/actions/userAction';
+
+class User extends Component {
+    componentDidMount() {
+        this.props.fetchUser();
+    }
+
     render() {
-        const { usersFromGym } = this.props;
+        const { usersFromGym, users, error, pending } = this.props;
         return (
             <>
                 <Wrapper>
@@ -29,9 +38,38 @@ export default class User extends Component {
                     <GymLocation>North York</GymLocation>
                 </Wrapper>
                 <SimpleBar style={{ height: '70%' }}>
-                    <UserProfileCard usersFromGym={usersFromGym} />
+                    <Link
+                        onClick={() => {
+                            this.props.openModalAction();
+                            this.props.openModalAction();
+                        }}
+                        to={{ pathname: '/partner/:uid' }}
+                    >
+                        <UserProfileCard
+                            usersFromGym={usersFromGym}
+                            users={users}
+                            error={error}
+                            pending={pending}
+                        />
+                    </Link>
                 </SimpleBar>
             </>
         );
     }
 }
+
+const mapStateToProps = state => ({
+    users: state.userReducer.users,
+    error: state.error,
+    pending: state.pending
+});
+
+const mapDispatchToProps = dispatch => ({
+    openModalAction: () => dispatch(openModalAction()),
+    fetchUser: () => dispatch(fetchUser())
+});
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(User);

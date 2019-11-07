@@ -152,7 +152,7 @@ class SignupForm extends Component {
 
         return (
             <>
-                {console.log(this.handleErrorMessages())}
+                {console.log(authError)}
                 <Form error={this.handleIsErrorFree()}>
                     <Form.Group widths='equal'>
                         <Form.Input

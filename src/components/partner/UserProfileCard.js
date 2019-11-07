@@ -5,16 +5,11 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 import image from './matthew.png';
-import fetchUser from 'store/actions/userAction';
 import SyncLoader from 'react-spinners/SyncLoader';
 
 class UserProfileCard extends Component {
-    componentDidMount() {
-        this.props.fetchUser();
-    }
-
     render() {
-        const { users, error, pending, selectedGym } = this.props;
+        const { users, error, pending } = this.props;
 
         if (pending) {
             return (
@@ -76,20 +71,4 @@ class UserProfileCard extends Component {
     }
 }
 
-const mapStateToProps = state => ({
-    users: state.userReducer.users,
-    selectedGym: state.selectedGymReducer.selectedGym,
-    error: state.error,
-    pending: state.pending
-});
-
-const mapDispatchToProps = dispatch => {
-    return {
-        fetchUser: bindActionCreators(fetchUser, dispatch)
-    };
-};
-
-export default connect(
-    mapStateToProps,
-    mapDispatchToProps
-)(UserProfileCard);
+export default UserProfileCard;

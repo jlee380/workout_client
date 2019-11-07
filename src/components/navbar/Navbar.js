@@ -35,7 +35,6 @@ class Navbar extends Component {
                         <A to='about'>CONTACT US</A>
                     </NavItem>
                     <NavItem>
-                        {console.log(login)}
                         {login ? (
                             <SignUpLink
                                 onClick={this.props.openModalAction}
