@@ -1,6 +1,5 @@
 
-![Uploading Screen Shot 2019-10-31 at 11.43.28 PM.png…]()
-
+<img width="1463" alt="Screen Shot 2019-10-31 at 11 43 28 PM" src="https://user-images.githubusercontent.com/8786498/68621312-67702200-049d-11ea-90d9-b98966043833.png">
 
 
 # Workout Together
@@ -10,7 +9,7 @@ This is a personal project to help people to find a workout partner near their w
 ### How it works
 
 There is a Google map(Google Maps API) displaying all Goodlife locations(Google Places API) in Toronto. Users can register themselves in the locations to appear in a website so that other people can reach out to them.
-[Take a glance](https://imgur.com/a/Jz3yyHH)
+
 
 ### Present Features
 
