@@ -1,45 +1,52 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
-import 'semantic-ui-css/semantic.min.css';
-import { createStore, applyMiddleware, compose } from 'redux';
-import { Provider } from 'react-redux';
-import { composeWithDevTools } from 'redux-devtools-extension';
-import { reactReduxFirebase, getFirebase } from 'react-redux-firebase';
-import { reduxFirestore, getFirestore } from 'redux-firestore';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import * as serviceWorker from "./serviceWorker";
+import "semantic-ui-css/semantic.min.css";
+import { createStore, applyMiddleware, compose } from "redux";
+import { Provider } from "react-redux";
+import { composeWithDevTools } from "redux-devtools-extension";
+import { reactReduxFirebase, getFirebase } from "react-redux-firebase";
+import { reduxFirestore, getFirestore } from "redux-firestore";
 
-import 'firebase/database';
-import thunk from 'redux-thunk';
-import firebase from 'firebase/app';
+import "firebase/database";
+import thunk from "redux-thunk";
+import firebase from "firebase/app";
 
-import 'dotenv';
+import "dotenv";
 
-import rootReducer from 'store/reducers/index';
+import rootReducer from "store/reducers/index";
+import { loadState, saveState } from "store/localStorage";
 
 const middleware = [thunk.withExtraArgument({ getFirebase, getFirestore })];
 
 const rrfConfig = {
-    userProfile: 'users',
-    useFirestoreForProfile: true // Firestore for Profile instead of Realtime DB
+  userProfile: "users",
+  useFirestoreForProfile: true // Firestore for Profile instead of Realtime DB
 };
 
+const persistedState = loadState();
+
 let store = createStore(
-    rootReducer,
-    {},
-    composeWithDevTools(
-        reactReduxFirebase(firebase, rrfConfig),
-        reduxFirestore(firebase),
-        applyMiddleware(...middleware)
-    )
+  rootReducer,
+  persistedState,
+  composeWithDevTools(
+    reactReduxFirebase(firebase, rrfConfig),
+    reduxFirestore(firebase),
+    applyMiddleware(...middleware)
+  )
 );
 
+store.subscribe(() => {
+  saveState(store.getState());
+});
+
 ReactDOM.render(
-    <Provider store={store}>
-        <App />
-    </Provider>,
-    document.getElementById('root')
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById("root")
 );
 
 // If you want your app to work offline and load faster, you can change
