@@ -36,7 +36,6 @@ class GoogleMaps extends Component {
   };
 
   getCoordinates = position => {
-    console.log(position.coords.latitude);
     this.setState({
       lat: position.coords.latitude,
       lng: position.coords.longitude
@@ -73,7 +72,6 @@ class GoogleMaps extends Component {
             }}
           >
             {gyms.map(gym => {
-              console.log(gym);
               return (
                 <Marker
                   key={gym._id}
@@ -139,4 +137,3 @@ const mapDispatchToProps = dispatch => {
 export const WrapperdMap = withScriptjs(withGoogleMap(GoogleMaps));
 
 export default connect(mapStateToProps, mapDispatchToProps)(WrapperdMap);
-// export default WrapperdMap;

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import SimpleBar from 'simplebar-react';
 import 'simplebar/dist/simplebar.min.css';
-
 import './User.css';
+
 import {
     Wrapper,
     FilterHeader,
@@ -13,9 +13,9 @@ import {
 } from './UserStyle';
 import UserProfileCard from './UserProfileCard';
 
-export default class User extends Component {
+class User extends Component {
     render() {
-        const { usersFromGym } = this.props;
+        const { users } = this.props;
         return (
             <>
                 <Wrapper>
@@ -29,9 +29,11 @@ export default class User extends Component {
                     <GymLocation>North York</GymLocation>
                 </Wrapper>
                 <SimpleBar style={{ height: '70%' }}>
-                    <UserProfileCard usersFromGym={usersFromGym} />
+                    <UserProfileCard usersFromGym={users} />
                 </SimpleBar>
             </>
         );
     }
 }
+
+export default User;
